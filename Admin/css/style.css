@@ -1,0 +1,64 @@
+/**Custom Style**/
+
+body {
+    background-color: rgb(225, 225, 225);
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+header.header {
+    background-color: #6976c0;
+    color: rgb(255, 255, 255);
+}
+
+header .header-text {
+    padding: 5px 10px;
+    position: relative;
+}
+
+header .gear-icon {
+    position: relative;
+    margin-bottom: 5.5px;
+    margin-right: 10px;
+}
+
+header .cup-icon {
+    position: relative;
+    margin-right: 10px;
+}
+
+header p {
+    margin-top: 15px;
+    position: relative;
+}
+
+section ol.breadcrumb
+{
+    background-color: white;
+    padding: 8px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+section il.breadcrumb-item a
+{
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        text-align: center;
+    }
+
+    header p {
+        margin-top: 12px;
+        position: relative;
+    }
+
+    header h2 {
+        margin-top: 12px;
+        position: relative;
+    }
+}
