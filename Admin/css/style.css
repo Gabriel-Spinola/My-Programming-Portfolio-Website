@@ -93,6 +93,11 @@ section div.panel-body .form-group textarea {
     resize: vertical;
 }
 
+section div.panel-body .btn-danger {
+    position: relative;
+    margin-right: 20px !important;
+}
+
 section div.first-panel,
 section div.second-panel,
 section div.third-panel {
