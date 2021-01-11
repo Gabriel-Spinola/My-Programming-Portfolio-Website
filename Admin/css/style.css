@@ -47,8 +47,6 @@ section ol.breadcrumb {
 }
 
 section li.list-group-title {
-    background-color: #6976c0;
-    color: white;
     padding: 15px 10px;
 }
 
@@ -59,6 +57,20 @@ section ul.list-group .list-group-home {
 
 section ul.list-group .list-group-item {
     padding: 12px 10px;
+}
+
+section ul.list-group li.active {
+    background-color: #6976c0 !important;
+    border: none !important;
+}
+
+section ul.list-group li.active a {
+    color: white !important;
+}
+
+section ul.list-group li.list-group-item a {
+    text-decoration: none !important;
+    color: black;
 }
 
 section ul.list-group .list-group-icon {
