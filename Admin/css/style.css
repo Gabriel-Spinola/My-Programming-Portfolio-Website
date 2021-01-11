@@ -34,17 +34,48 @@ header p {
     position: relative;
 }
 
-section ol.breadcrumb
-{
+section ol.breadcrumb {
     background-color: white;
     padding: 8px 10px;
     margin: 10px 0;
     border-radius: 5px;
 }
 
-section il.breadcrumb-item a
-{
-    text-decoration: none !important;
+section li.list-group-title {
+    background-color: #6976c0;
+    color: white;
+    padding: 15px 10px;
+}
+
+section ul.list-group .list-group-home {
+    position: relative;
+    margin-right: 10px;
+}
+
+section ul.list-group .list-group-item {
+    padding: 12px 10px;
+}
+
+section ul.list-group .list-group-icon {
+    position: relative;
+    margin-right: 10px;
+}
+
+section div.panel-heading {
+    background-color: #6976c0;
+    border-radius: 2px;
+    padding: 4px 10px;
+    color: white;
+}
+
+section div.panel-heading h3 {
+    position: relative;
+    padding-top: 2px;
+}
+
+section div.panel-body {
+    background-color: white;
+    padding: 4px 10px;
 }
 
 @media screen and (max-width: 1000px) {
