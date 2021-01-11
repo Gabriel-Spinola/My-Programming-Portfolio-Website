@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 
@@ -134,7 +135,7 @@
 
                     <div class="col-md-9">
 
-                        <div class="panel panel-default">
+                        <div class="panel panel-default first-panel">
 
                             <div class="panel-heading">
 
@@ -148,27 +149,102 @@
                                 
                                     <div class="form-group">
 
-                                        <label for="email">Email address:</label>
-                                        <input type="email" class="form-control" id="email">
+                                        <label>HTMl Code:</label>
+                                        <textarea class="form-control"></textarea>
 
                                     </div><!--form-group-->
-
-                                    <div class="form-group">
-
-                                        <label for="pwd">Password:</label>
-                                        <input type="password" class="form-control" id="pwd">
-
-                                    </div><!--form-group-->
-
-                                    <div class="checkbox">
-
-                                        <label><input type="checkbox"> Remember me</label>
-
-                                    </div><!--checkboc-->
 
                                     <button type="submit" class="btn btn-outline-dark">Submit</button>
 
                                 </form>
+
+                            </div><!--panel-body-->
+
+                        </div><!--panel-default-->
+
+                        <div class="panel panel-default second-panel">
+
+                            <div class="panel-heading">
+
+                                <h3>Register Team</h3>
+
+                            </div><!--panel-heading-->
+
+                            <div class="panel-body">
+
+                                <form action="index.php">
+                                
+                                    <div class="form-group">
+
+                                        <label for="member-name">Member Name:</label>
+                                        <input type="text" name="member-name" class="form-control" id="member-name">
+
+                                        <label>Member Description</label>
+                                        <textarea class="form-control"></textarea>
+
+                                    </div><!--form-group-->
+
+                                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+
+                                </form>
+
+                            </div><!--panel-body-->
+
+                        </div><!--panel-default-->
+
+                        <div class="panel panel-default third-panel">
+
+                            <div class="panel-heading">
+
+                                <h3>Table</h3>
+
+                            </div><!--panel-heading-->
+
+                            <div class="panel-body">
+
+                                <table class="table table-bordered">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email</th>
+
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table><!--table-bordered-->
 
                             </div><!--panel-body-->
 

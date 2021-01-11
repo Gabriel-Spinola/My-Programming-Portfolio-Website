@@ -1,3 +1,8 @@
+/**Config**/
+* {
+    font-family: "Open Sans";
+}
+
 /**Custom Style**/
 
 body {
@@ -76,6 +81,22 @@ section div.panel-heading h3 {
 section div.panel-body {
     background-color: white;
     padding: 4px 10px;
+}
+
+section div.panel-body .form-group {
+    margin-bottom: 12px;
+}
+
+section div.panel-body .form-group textarea {
+    height: 100px;
+    max-height: 500px;
+    resize: vertical;
+}
+
+section div.first-panel,
+section div.second-panel,
+section div.third-panel {
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 1000px) {
