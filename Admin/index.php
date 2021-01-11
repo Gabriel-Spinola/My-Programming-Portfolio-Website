@@ -122,23 +122,23 @@
                             <li class="list-group-item">Porta ac consectetur ac</li>
                             <li class="list-group-item">Vestibulum at eros</li>
 
-                        </ul>
+                        </ul><!--list-group-->
 
-                    </div>
+                    </div><!--col-md-3-->
 
                     <div class="col-md-9">
 
 
 
-                    </div>
+                    </div><!--col-md-9-->
 
-                </div>
+                </div><!--row-->
 
-            </div>
+            </div><!--container-->
 
-        </section>
+        </section><!--main-->
 
-    </main><!--main-box
+    </main><!--main-box-->
 
     <script src="Imports/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
