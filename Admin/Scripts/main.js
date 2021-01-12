@@ -1,6 +1,6 @@
 $(function () {
     function Click() {
-        //$('.item-home').addClass('active')
+        $('.item-home').addClass('active')
 
         function setActivity(target) { 
             $(target).click(() => {
@@ -14,9 +14,9 @@ $(function () {
                         $(target).addClass('active')
                     }
                 }
-            })
 
-            return false
+                return false
+            })
         }
 
         setActivity('.item-home')
@@ -26,20 +26,25 @@ $(function () {
     }
 
     function ScrollToItem() { 
-        if ($('target').length > 0) {
-            // the element exists, so we need scroll to an element.
-            var element = `#${ $('target').attr('target') }`
-    
-            var divScroll = $(element).offset().top
-    
-            $('html, body').animate({
-                scrollTop: divScroll
-            }, 2000)
+        function roll(menuItem, target) {
+            $(`${menuItem}`).click(() => {
+                var ref = target
+                var offset = $(ref).offset().top
+
+                $('html, body').animate({
+                    scrollTop: offset
+                })
+
+                return false
+            })
         }
+
+        roll('.item-home', '#home')
+        roll('.item-addMember', '#addMember')
+        roll('.item-memberList', '#memberList')
+        roll('.item-extra', '#extra')
     }
 
     Click()
     ScrollToItem()
-
-    // 'li.nav-item', 'li.list-group-item', '.panel-default'
 })
