@@ -264,9 +264,19 @@
 
                                     </div><!--form-group-->
 
+                                    <input type="hidden" name="edit_extra" value="">
+
                                     <button type="submit" name="action" class="btn btn-outline-dark">Submit</button>
 
                                 </form>
+
+                                <?php 
+                                
+                                    if(isset($_POST['edit_extra'])) {
+                                        
+                                    }
+                                
+                                ?>
 
                             </div><!--panel-body-->
 
