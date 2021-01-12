@@ -207,7 +207,7 @@ aaa
 
                                 <div class="col-md-9 col-md-offset-1">
 
-                                    <h3>Gabriel</h3>
+                                    <h3>Gabriel Spinola</h3>
 
                                     <p>Cras et purus a nunc scelerisque fermentum. Pellentesque non feugiat augue, id laoreet elit. Praesent laoreet lorem elit, non scelerisque sapien tempus nec. Integer nec posuere dolor. Ut dolor massa, auctor at tempor et, fermentum a eros. Integer at vestibulum felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eget ipsum in leo egestas convallis. Sed dictum felis non ullamcorper laoreet. Maecenas lorem felis</p>
 
@@ -237,7 +237,7 @@ aaa
 
                                 <div class="col-md-9 col-md-offset-1">
 
-                                    <h3>Gabriel</h3>
+                                    <h3>Gabriel Spinola</h3>
 
                                     <p>Cras et purus a nunc scelerisque fermentum. Pellentesque non feugiat augue, id laoreet elit. Praesent laoreet lorem elit, non scelerisque sapien tempus nec. Integer nec posuere dolor. Ut dolor massa, auctor at tempor et, fermentum a eros. Integer at vestibulum felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eget ipsum in leo egestas convallis. Sed dictum felis non ullamcorper laoreet. Maecenas lorem felis</p>
 
