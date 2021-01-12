@@ -43,6 +43,15 @@ $(function () {
         roll('.item-extra', '#extra')
     }
 
+    function AutoCloseNavMenu() {
+        if ($(window)[0].innerWidth <= 768) {
+            $('.nav-item').click(() => {
+                $('.navbar-toggler').click()
+            })
+        }
+    }
+
+    AutoCloseNavMenu()
     Click()
     ScrollToItem()
 })

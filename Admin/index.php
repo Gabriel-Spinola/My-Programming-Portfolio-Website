@@ -136,7 +136,7 @@
 
                     </div><!--col-md-3-->
 
-                    <div class="col-md-9">
+                    <div class="col-md-9 panels">
 
                         <div class="panel panel-default second-panel" id="addMember">
 
