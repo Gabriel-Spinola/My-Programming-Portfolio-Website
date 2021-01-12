@@ -53,8 +53,8 @@ $(function () {
 
     function DeleteMember() {
         $('button.delete-member').click(function () {
-            var member_id = $(this).attr('member_id');
-            var element = $(this).parent().parent();
+            var member_id = $(this).attr('member_id')
+            var element = $(this).parent().parent()
 
             $.ajax({
                 method: 'post',
@@ -64,8 +64,8 @@ $(function () {
                 url: 'delete.php'
             }).done(function () {
                 element.fadeOut(function () {
-                    element.remove();
-                });
+                    element.remove()
+                })
             })
         })
     }

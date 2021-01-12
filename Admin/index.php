@@ -100,288 +100,286 @@
 
     <main class="main-box">
 
-        <section class="bread">
+    <section class="bread">
 
-            <div class="container">
+        <div class="container">
 
-                <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb">
 
-                    <ol class="breadcrumb">
+                <ol class="breadcrumb">
 
-                        <li class="breadcrumb-item">Home</li>
-                        
-                    </ol><!--breadcrumb-->
+                    <li class="breadcrumb-item">Home</li>
+                    
+                </ol><!--breadcrumb-->
 
-                </nav><!--breadcrumb-->
+            </nav><!--breadcrumb-->
 
-            </div><!--container-->
+        </div><!--container-->
 
-        </section><!--bread-->
+    </section><!--bread-->
 
-        <section class="main">
+    <section class="main">
 
-            <div class="container">
+        <div class="container">
 
-                <div class="row">
+            <div class="row">
 
-                    <div class="col-md-3">
+                <div class="col-md-3">
 
-                        <ul class="list-group" id="list-group home">
+                    <ul class="list-group" id="list-group home">
 
-                            <li class="list-group-item list-group-title item-home"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill list-group-home" viewBox="0 0 16 16">
-                                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-                            </svg>Home</a></li>
+                        <li class="list-group-item list-group-title item-home"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill list-group-home" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                        </svg>Home</a></li>
 
-                            <li class="list-group-item item-addMember"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill list-group-icon" viewBox="0 0 16 16">
-                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-                            </svg>Add Member</a></li>
+                        <li class="list-group-item item-addMember"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill list-group-icon" viewBox="0 0 16 16">
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>Add Member</a></li>
 
-                            <li class="list-group-item item-memberList"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill list-group-icon" viewBox="0 0 16 16">
-                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
-                            </svg>Member List</a></li>
+                        <li class="list-group-item item-memberList"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill list-group-icon" viewBox="0 0 16 16">
+                            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                        </svg>Member List</a></li>
 
-                            <li class="list-group-item item-extra"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill list-group-icon" viewBox="0 0 16 16">
-                                <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                            </svg>Extra</a></li>
+                        <li class="list-group-item item-extra"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill list-group-icon" viewBox="0 0 16 16">
+                            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                        </svg>Extra</a></li>
 
-                        </ul><!--list-group-->
+                    </ul><!--list-group-->
 
-                    </div><!--col-md-3-->
+                </div><!--col-md-3-->
 
-                    <div class="col-md-9 panels">
+                <div class="col-md-9 panels">
 
-                        <div class="panel panel-default second-panel" id="addMember">
+                    <div class="panel panel-default second-panel" id="addMember">
 
-                            <div class="panel-heading">
+                        <div class="panel-heading">
 
-                                <h3>Add Member</h3>
+                            <h3>Add Member</h3>
 
-                            </div><!--panel-heading-->
+                        </div><!--panel-heading-->
 
-                            <div class="panel-body">
+                        <div class="panel-body">
 
-                                <form method="post" action="index.php">
+                            <form method="post" action="index.php">
+                            
+                                <div class="form-group">
+
+                                    <label for="member-name">Member Name:</label>
+                                    <input type="text" name="member-name" class="form-control" id="member-name">
+
+                                    <label for="member-surname">Member Surname</label>
+                                    <input type="text" name="member-surname" class="form-control" id="member-surname">
+
+                                    <label>Member Description</label>
+                                    <textarea name="description" class="form-control"></textarea>
+
+                                </div><!--form-group-->
                                 
-                                    <div class="form-group">
+                                <input type="hidden" name="add-member" value="">
 
-                                        <label for="member-name">Member Name:</label>
-                                        <input type="text" name="member-name" class="form-control" id="member-name">
+                                <button type="submit" class="btn btn-outline-dark">Submit</button>
+        
+                            </form>
 
-                                        <label for="member-surname">Member Surname</label>
-                                        <input type="text" name="member-surname" class="form-control" id="member-surname">
+                            <br>
 
-                                        <label>Member Description</label>
-                                        <textarea name="description" class="form-control"></textarea>
+                            <?php if(isset($_POST['add-member'])): ?>
 
-                                    </div><!--form-group-->
+                                <?php try { ?>
                                     
-                                    <input type="hidden" name="add-member" value="">
+                                    <?php
 
-                                    <button type="submit" class="btn btn-outline-dark">Submit</button>
-            
-                                </form>
+                                        $name = $_POST['member-name'];
+                                        $surname = $_POST['member-surname'];
+                                        $description = $_POST['description'];
 
-                                <br>
+                                        $query = $pdo -> prepare(
+                                        "INSERT INTO `tb_team`
+                                            VALUES (null, ?, ?, ?);"
+                                        );
 
-                                <?php if(isset($_POST['add-member'])): ?>
+                                        $query -> execute([
+                                            $name, $surname,
+                                            $description
+                                        ]);
 
-                                    <?php try { ?>
-                                        
-                                        <?php
+                                    ?>
 
-                                            $name = $_POST['member-name'];
-                                            $surname = $_POST['member-surname'];
-                                            $description = $_POST['description'];
+                                    <div class="alert alert-success" role="alert">
 
-                                            $query = $pdo -> prepare(
-                                            "INSERT INTO `tb_team`
-                                                VALUES (null, ?, ?, ?);"
-                                            );
+                                        <h4 class="alert-heading">Well done!</h4>
 
-                                            $query -> execute([
-                                                $name, $surname,
-                                                $description
-                                            ]);
+                                        <p>Aww yeah, you <b>successfully</b> add a member to the team.</p>
 
-                                        ?>
+                                        <hr>
 
-                                        <div class="alert alert-success" role="alert">
+                                    </div>
 
-                                            <h4 class="alert-heading">Well done!</h4>
+                                <?php } catch(Exception $e) { ?>
 
-                                            <p>Aww yeah, you <b>successfully</b> add a member to the team.</p>
+                                    <div class="alert alert-danger" role="alert">
+                                    
+                                        <p>Something went wrong, and we can't edit the extra section ):</p>
 
-                                            <hr>
+                                    </div>
 
-                                        </div>
+                                <?php } ?>
 
-                                    <?php } catch(Exception $e) { ?>
+                            <?php endif ?>
 
-                                        <div class="alert alert-danger" role="alert">
-                                        
-                                            <p>Something went wrong, and we can't edit the extra section ):</p>
+                        </div><!--panel-body-->
 
-                                        </div>
+                    </div><!--panel-default-->
 
-                                    <?php } ?>
+                    <div class="panel panel-default third-panel" id="memberList">
 
-                                <?php endif ?>
+                        <div class="panel-heading">
 
-                            </div><!--panel-body-->
+                            <h3>Member List</h3>
 
-                        </div><!--panel-default-->
+                        </div><!--panel-heading-->
 
-                        <div class="panel panel-default third-panel" id="memberList">
+                        <div class="panel-body">
 
-                            <div class="panel-heading">
+                            <table class="table table-bordered">
 
-                                <h3>Member List</h3>
+                                <thead>
 
-                            </div><!--panel-heading-->
+                                    <tr>
 
-                            <div class="panel-body">
+                                        <th>First name</th>
+                                        <th>Last name</th>
+                                        <th>Delete Member</th>
 
-                                <table class="table table-bordered">
+                                    </tr>
 
-                                    <thead>
+                                </thead>
 
+                                <tbody>
+                                    
+                                    <?php 
+                                    
+                                        $query = $pdo -> prepare(
+                                            "SELECT * FROM `tb_team`;"
+                                        );
+
+                                        $query -> execute();
+
+                                        $selectMember = $query -> fetchAll();
+
+                                    ?>
+
+                                    <?php foreach($selectMember as $key => $row): ?>
+                                    
                                         <tr>
 
-                                            <th>First name</th>
-                                            <th>Last name</th>
-                                            <th>Delete Member</th>
+                                            <td><?php echo $row['name'] ?></td>
+                                            <td><?php echo $row['surname'] ?></td>
+                                            <td><button class="btn btn-danger delete-member" member_id="<?php echo $row['id'] ?>">Delete</button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                            </svg></td>
 
                                         </tr>
+                                    
+                                    <?php endforeach ?>
 
-                                    </thead>
+                                </tbody>
 
-                                    <tbody>
-                                        
-                                        <?php 
-                                        
-                                            $query = $pdo -> prepare(
-                                                "SELECT * FROM `tb_team`;"
-                                            );
+                            </table><!--table-bordered-->
 
-                                            $query -> execute();
+                        </div><!--panel-body-->
 
-                                            $selectMember = $query -> fetchAll();
+                    </div><!--panel-default-->
 
-                                        ?>
+                    <div class="panel panel-default first-panel" id="extra">
 
-                                        <?php foreach($selectMember as $key => $row): ?>
-                                        
-                                            <tr>
+                        <div class="panel-heading">
 
-                                                <td><?php echo $row['name'] ?></td>
-                                                <td><?php echo $row['surname'] ?></td>
-                                                <td><button class="btn btn-danger delete-member" member_id="<?php echo $row['id'] ?>">Delete</button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
-                                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                                                </svg></td>
+                            <h3>Extras</h3>
 
-                                                <?php echo $row['id'] ?>
+                        </div><!--panel-heading-->
 
-                                            </tr>
-                                        
-                                        <?php endforeach ?>
+                        <div class="panel-body">
 
-                                    </tbody>
+                            <form method="post" action="index.php">
+                            
+                                <div class="form-group">
 
-                                </table><!--table-bordered-->
+                                    <label>HTMl Code:</label>
+                                    <textarea name="extra" class="form-control"><?php echo $about ?></textarea>
 
-                            </div><!--panel-body-->
+                                </div><!--form-group-->
 
-                        </div><!--panel-default-->
+                                <input type="hidden" name="edit_extra" value="">
 
-                        <div class="panel panel-default first-panel" id="extra">
+                                <button type="submit" name="action" class="btn btn-outline-dark">Submit</button>
 
-                            <div class="panel-heading">
+                            </form>
 
-                                <h3>Extras</h3>
+                            <br>
 
-                            </div><!--panel-heading-->
-
-                            <div class="panel-body">
-
-                                <form method="post" action="index.php">
+                            <?php if(isset($_POST['edit_extra'])): ?>
                                 
-                                    <div class="form-group">
+                                <?php try { ?>
+                                
+                                    <?php
 
-                                        <label>HTMl Code:</label>
-                                        <textarea name="extra" class="form-control"><?php echo $about ?></textarea>
+                                        $extra = $_POST['extra'];
 
-                                    </div><!--form-group-->
+                                        $pdo -> exec(
+                                            "DELETE FROM `tb_extra`;"
+                                        );
 
-                                    <input type="hidden" name="edit_extra" value="">
+                                        $query = $pdo -> prepare(
+                                        "INSERT INTO `tb_extra`
+                                            VALUES (null, ?);"
+                                        );
 
-                                    <button type="submit" name="action" class="btn btn-outline-dark">Submit</button>
+                                        $query -> execute([$extra]);
 
-                                </form>
+                                        $sql = $pdo -> prepare(
+                                            "SELECT * FROM `tb_extra`"
+                                        );
 
-                                <br>
-
-                                <?php if(isset($_POST['edit_extra'])): ?>
-                                    
-                                    <?php try { ?>
-                                    
-                                        <?php
-
-                                            $extra = $_POST['extra'];
-
-                                            $pdo -> exec(
-                                                "DELETE FROM `tb_extra`;"
-                                            );
-
-                                            $query = $pdo -> prepare(
-                                            "INSERT INTO `tb_extra`
-                                                VALUES (null, ?);"
-                                            );
-
-                                            $query -> execute([$extra]);
-
-                                            $sql = $pdo -> prepare(
-                                                "SELECT * FROM `tb_extra`"
-                                            );
-
-                                            $sql -> execute();
-                                            $about = $sql -> fetch()['extra'];
-                                            
-                                        ?>
-
-                                        <div class="alert alert-success" role="alert">
-
-                                            <h4 class="alert-heading">Well done!</h4>
-
-                                            <p>Aww yeah, you <b>successfully</b> edit the extra section.</p>
-
-                                            <hr>
-
-                                        </div>
-
-                                    <?php } catch(Exception $e) { ?>
-
-                                        <div class="alert alert-danger" role="alert">
+                                        $sql -> execute();
+                                        $about = $sql -> fetch()['extra'];
                                         
-                                            <p>Something went wrong, and we can't edit the extra section ):</p>
+                                    ?>
 
-                                        </div>
+                                    <div class="alert alert-success" role="alert">
 
-                                    <?php } ?>
+                                        <h4 class="alert-heading">Well done!</h4>
 
-                                <?php endif ?>
+                                        <p>Aww yeah, you <b>successfully</b> edit the extra section.</p>
 
-                            </div><!--panel-body-->
+                                        <hr>
 
-                        </div><!--panel-default-->
+                                    </div>
 
-                    </div><!--col-md-9-->
+                                <?php } catch(Exception $e) { ?>
 
-                </div><!--row-->
+                                    <div class="alert alert-danger" role="alert">
+                                    
+                                        <p>Something went wrong, and we can't edit the extra section ):</p>
 
-            </div><!--container-->
+                                    </div>
 
-        </section><!--main-->
+                                <?php } ?>
+
+                            <?php endif ?>
+
+                        </div><!--panel-body-->
+
+                    </div><!--panel-default-->
+
+                </div><!--col-md-9-->
+
+            </div><!--row-->
+
+        </div><!--container-->
+
+    </section><!--main-->
 
     </main><!--main-box-->
 
