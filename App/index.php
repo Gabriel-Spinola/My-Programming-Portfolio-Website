@@ -165,71 +165,59 @@
 
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <?php
+                    
+                        $query = $pdo -> prepare(
+                            "SELECT * FROM `tb_team`;"
+                        );
 
-                        <div class="equipe-single">
+                        $query -> execute();
 
-                            <div class="row">
+                        $selectMember = $query -> fetchAll();
+                    
+                    ?>
 
-                                <div class="col-md-3">
+                    <?php foreach($selectMember as $key => $row): ?>
 
-                                    <div class="user-picture">
+                        <div class="col-md-6">
 
-                                        <div class="user-picture-child"></div>
+                            <div class="equipe-single">
 
-                                    </div>
+                                <div class="row">
 
-                                </div><!--col-md-3-->
+                                    <div class="col-md-3">
 
-                                <div class="col-md-9 col-md-offset-1">
+                                        <div class="user-picture">
 
-                                    <h3>Gabriel Spinola</h3>
+                                            <div class="user-picture-child"></div>
 
-                                    <p>Cras et purus a nunc scelerisque fermentum. Pellentesque non feugiat augue, id laoreet elit. Praesent laoreet lorem elit, non scelerisque sapien tempus nec. Integer nec posuere dolor. Ut dolor massa, auctor at tempor et, fermentum a eros. Integer at vestibulum felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eget ipsum in leo egestas convallis. Sed dictum felis non ullamcorper laoreet. Maecenas lorem felis</p>
+                                        </div>
 
-                                </div><!--col-md-9-->
+                                    </div><!--col-md-3-->
 
-                            </div><!--row-->
+                                    <div class="col-md-9 col-md-offset-1">
 
-                        </div><!--equipe-single-->
+                                        <h3><?php echo $row['name'] ?> <?php echo $row['surname'] ?></h3>
 
-                    </div><!--col-md-6-->
+                                        <p><?php echo $row['description'] ?></p>
 
-                    <div class="col-md-6">
+                                    </div><!--col-md-9-->
 
-                        <div class="equipe-single">
+                                </div><!--row-->
+                                
+                            </div><!--equipe-single-->
 
-                            <div class="row">
+                        </div><!--col-md-6-->
 
-                                <div class="col-md-3">
-
-                                    <div class="user-picture">
-
-                                        <div class="user-picture-child"></div>
-
-                                    </div>
-
-                                </div><!--col-md-3-->
-
-                                <div class="col-md-9 col-md-offset-1">
-
-                                    <h3>Gabriel Spinola</h3>
-
-                                    <p>Cras et purus a nunc scelerisque fermentum. Pellentesque non feugiat augue, id laoreet elit. Praesent laoreet lorem elit, non scelerisque sapien tempus nec. Integer nec posuere dolor. Ut dolor massa, auctor at tempor et, fermentum a eros. Integer at vestibulum felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eget ipsum in leo egestas convallis. Sed dictum felis non ullamcorper laoreet. Maecenas lorem felis</p>
-
-                                </div><!--col-md-9-->
-
-                            </div><!--row-->
-                            
-                        </div><!--equipe-single-->
-
-                    </div><!--col-md-6-->
+                    <?php endforeach ?>
                     
                 </div><!--row-->
 
             </div><!--equipe-container-->
 
         </section><!--equipe-->
+
+        <hr>
 
         <section class="contato-planos">
 
