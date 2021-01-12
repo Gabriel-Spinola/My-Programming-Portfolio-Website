@@ -55,20 +55,11 @@ $(function () {
         for (let i = 0; i < numberOfMembers; i++) {
             let actualId = i + 1
             
-            $.ajax({
-                type: "post",
-                url: "delete.php",
-                data: {
-                    'memberId': actualId
-                },
-                dataType: "dataType"
-            }).done(() => {
-                $(`button#${actualId}`).click(() => {
-                    $(`#${actualId}`).parent().parent().fadeOut(() => {
-                        $(`#${actualId}`).parent().parent().remove()
-                    })
-                })    
-            })
+            $(`button#${actualId}`).click(() => {
+                $(`#${actualId}`).parent().parent().fadeOut(() => {
+                    $(`#${actualId}`).parent().parent().remove()
+                })
+            })    
         }
     }
 
