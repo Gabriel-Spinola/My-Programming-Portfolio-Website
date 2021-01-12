@@ -260,7 +260,7 @@
                                     <div class="form-group">
 
                                         <label>HTMl Code:</label>
-                                        <textarea class="form-control"><?php echo $about ?></textarea>
+                                        <textarea name="extra" class="form-control"><?php echo $about ?></textarea>
 
                                     </div><!--form-group-->
 
@@ -270,13 +270,56 @@
 
                                 </form>
 
-                                <?php 
-                                
-                                    if(isset($_POST['edit_extra'])) {
-                                        
-                                    }
-                                
-                                ?>
+                                <br>
+
+                                <?php if(isset($_POST['edit_extra'])): ?>
+                                    
+                                    <?php 
+                                    
+                                        try {
+                                            $extra = $_POST['extra'];
+
+                                            $pdo -> exec(
+                                                "DELETE FROM `tb_extra`;"
+                                            );
+
+                                            $query = $pdo -> prepare(
+                                               "INSERT INTO `tb_extra`
+                                                VALUES (null, ?);"
+                                            );
+
+                                            $query -> execute([$extra]);
+
+                                            $sql = $pdo -> prepare(
+                                                "SELECT * FROM `tb_extra`"
+                                            );
+
+                                            $sql -> execute();
+                                            $about = $sql -> fetch()['extra'];
+
+                                    ?>
+
+                                            <div class="alert alert-success" role="alert">
+
+                                                <h4 class="alert-heading">Well done!</h4>
+
+                                                <p>Aww yeah, you <b>successfully</b> edit the extra section.</p>
+
+                                                <hr>
+
+                                            </div>
+
+                                    <?php } catch(Exception $e) { ?>
+
+                                            <div class="alert alert-danger" role="alert">
+                                            
+                                                <p>Something went wrong, and we can't edit the extra section ):</p>
+
+                                            </div>
+
+                                    <?php } ?>
+
+                                <?php endif ?>
 
                             </div><!--panel-body-->
 
