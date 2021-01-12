@@ -161,21 +161,72 @@
 
                             <div class="panel-body">
 
-                                <form action="index.php">
+                                <form method="post" action="index.php">
                                 
                                     <div class="form-group">
 
                                         <label for="member-name">Member Name:</label>
                                         <input type="text" name="member-name" class="form-control" id="member-name">
 
+                                        <label for="member-surname">Member Surname</label>
+                                        <input type="text" name="member-surname" class="form-control" id="member-surname">
+
                                         <label>Member Description</label>
-                                        <textarea class="form-control"></textarea>
+                                        <textarea name="description" class="form-control"></textarea>
 
                                     </div><!--form-group-->
+                                    
+                                    <input type="hidden" name="add-member" value="">
 
                                     <button type="submit" class="btn btn-outline-dark">Submit</button>
-
+            
                                 </form>
+
+                                <br>
+
+                                <?php if(isset($_POST['add-member'])): ?>
+
+                                    <?php try { ?>
+                                        
+                                        <?php
+
+                                            $name = $_POST['member-name'];
+                                            $surname = $_POST['member-surname'];
+                                            $description = $_POST['description'];
+
+                                            $query = $pdo -> prepare(
+                                            "INSERT INTO `tb_team`
+                                                VALUES (null, ?, ?, ?);"
+                                            );
+
+                                            $query -> execute([
+                                                $name, $surname,
+                                                $description
+                                            ]);
+
+                                        ?>
+
+                                        <div class="alert alert-success" role="alert">
+
+                                            <h4 class="alert-heading">Well done!</h4>
+
+                                            <p>Aww yeah, you <b>successfully</b> add a member to the team.</p>
+
+                                            <hr>
+
+                                        </div>
+
+                                    <?php } catch(Exception $e) { ?>
+
+                                        <div class="alert alert-danger" role="alert">
+                                        
+                                            <p>Something went wrong, and we can't edit the extra section ):</p>
+
+                                        </div>
+
+                                    <?php } ?>
+
+                                <?php endif ?>
 
                             </div><!--panel-body-->
 
@@ -274,9 +325,10 @@
 
                                 <?php if(isset($_POST['edit_extra'])): ?>
                                     
-                                    <?php 
+                                    <?php try { ?>
                                     
-                                        try {
+                                        <?php
+
                                             $extra = $_POST['extra'];
 
                                             $pdo -> exec(
@@ -284,7 +336,7 @@
                                             );
 
                                             $query = $pdo -> prepare(
-                                               "INSERT INTO `tb_extra`
+                                            "INSERT INTO `tb_extra`
                                                 VALUES (null, ?);"
                                             );
 
@@ -296,26 +348,26 @@
 
                                             $sql -> execute();
                                             $about = $sql -> fetch()['extra'];
+                                            
+                                        ?>
 
-                                    ?>
+                                        <div class="alert alert-success" role="alert">
 
-                                            <div class="alert alert-success" role="alert">
+                                            <h4 class="alert-heading">Well done!</h4>
 
-                                                <h4 class="alert-heading">Well done!</h4>
+                                            <p>Aww yeah, you <b>successfully</b> edit the extra section.</p>
 
-                                                <p>Aww yeah, you <b>successfully</b> edit the extra section.</p>
+                                            <hr>
 
-                                                <hr>
-
-                                            </div>
+                                        </div>
 
                                     <?php } catch(Exception $e) { ?>
 
-                                            <div class="alert alert-danger" role="alert">
-                                            
-                                                <p>Something went wrong, and we can't edit the extra section ):</p>
+                                        <div class="alert alert-danger" role="alert">
+                                        
+                                            <p>Something went wrong, and we can't edit the extra section ):</p>
 
-                                            </div>
+                                        </div>
 
                                     <?php } ?>
 
