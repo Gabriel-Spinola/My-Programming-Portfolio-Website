@@ -32,10 +32,10 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-                    <li class="nav-item item-home"><a class="nav-link" href="home">Home</a></li>
-                    <li class="nav-item item-addMember"><a class="nav-link" href="addMember">Add Member</a></li>
-                    <li class="nav-item item-memberList"><a class="nav-link" href="memberList">Member List</a></li>
-                    <li class="nav-item item-extra"><a class="nav-link" href="extra">Extras</a></li>
+                    <li class="nav-item item-home"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item item-addMember"><a class="nav-link" href="#">Add Member</a></li>
+                    <li class="nav-item item-memberList"><a class="nav-link" href="#">Member List</a></li>
+                    <li class="nav-item item-extra"><a class="nav-link" href="#">Extras</a></li>
 
                 </ul><!--navbar-nav me-auto-->
 
@@ -115,20 +115,20 @@
 
                         <ul class="list-group" id="list-group home">
 
-                            <li class="list-group-item list-group-title item-home"><a class="text-decoration-none" href="home"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill list-group-home" viewBox="0 0 16 16">
+                            <li class="list-group-item list-group-title item-home"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill list-group-home" viewBox="0 0 16 16">
                                 <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
                             </svg>Home</a></li>
 
-                            <li class="list-group-item item-addMember"><a class="text-decoration-none" href="addMember"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill list-group-icon" viewBox="0 0 16 16">
+                            <li class="list-group-item item-addMember"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill list-group-icon" viewBox="0 0 16 16">
                                 <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                             </svg>Add Member</a></li>
 
-                            <li class="list-group-item item-memberList"><a class="text-decoration-none" href="memberList"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill list-group-icon" viewBox="0 0 16 16">
+                            <li class="list-group-item item-memberList"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill list-group-icon" viewBox="0 0 16 16">
                                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
                             </svg>Member List</a></li>
 
-                            <li class="list-group-item item-extra"><a class="text-decoration-none" href="extra"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill list-group-icon" viewBox="0 0 16 16">
+                            <li class="list-group-item item-extra"><a class="text-decoration-none" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill list-group-icon" viewBox="0 0 16 16">
                                 <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                             </svg>Extra</a></li>
 
@@ -269,7 +269,7 @@
 
     </main><!--main-box-->
 
-    <script src="Imports/jquery-3.5.1.min.js"></script>
+    <script src="Imports/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <script src="Scripts/main.js"></script>

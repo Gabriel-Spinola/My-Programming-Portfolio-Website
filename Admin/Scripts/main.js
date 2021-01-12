@@ -34,8 +34,6 @@ $(function () {
                 $('html, body').animate({
                     scrollTop: offset
                 })
-
-                return false
             })
         }
 
