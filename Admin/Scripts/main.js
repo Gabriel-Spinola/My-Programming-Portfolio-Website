@@ -2,14 +2,14 @@ $(function () {
     function Click() {
         $('.item-home').addClass('active')
 
-        function setActivity(target) { 
+        function setActivity(target) {
             $(target).click(() => {
                 if (!$(target).hasClass('active')) {
                     if ($('.nav-item, .list-group-item').hasClass('active')) {
                         $('.nav-item, .list-group-item').removeClass('active')
-    
+
                         $(target).addClass('active')
-                    }
+                    } 
                     else {
                         $(target).addClass('active')
                     }
@@ -25,7 +25,7 @@ $(function () {
         setActivity('.item-extra')
     }
 
-    function ScrollToItem() { 
+    function ScrollToItem() {
         function roll(menuItem, target) {
             $(`${menuItem}`).click(() => {
                 var ref = target
@@ -49,21 +49,28 @@ $(function () {
                 $('.navbar-toggler').click()
             })
         }
-    }   
-
-    function DeleteMember(numberOfMembers) {
-        for (let i = 0; i < numberOfMembers; i++) {
-            let actualId = i + 1
-            
-            $(`button#${actualId}`).click(() => {
-                $(`#${actualId}`).parent().parent().fadeOut(() => {
-                    $(`#${actualId}`).parent().parent().remove()
-                })
-            })    
-        }
     }
 
-    DeleteMember(2)
+    function DeleteMember() {
+        $('button.delete-member').click(function () {
+            var id_membro = $(this).attr('id_membro');
+            var el = $(this).parent().parent();
+
+            $.ajax({
+                method: 'post',
+                data: {
+                    'member_id': id_membro
+                },
+                url: 'delete.php'
+            }).done(function () {
+                el.fadeOut(function () {
+                    el.remove();
+                });
+            })
+        })
+    }
+
+    DeleteMember()
     AutoCloseNavMenu()
     Click()
     ScrollToItem()
