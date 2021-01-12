@@ -49,16 +49,30 @@ $(function () {
                 $('.navbar-toggler').click()
             })
         }
+    }   
+
+    function DeleteMember(numberOfMembers) {
+        for (let i = 0; i < numberOfMembers; i++) {
+            let actualId = i + 1
+            
+            $.ajax({
+                type: "post",
+                url: "delete.php",
+                data: {
+                    'memberId': actualId
+                },
+                dataType: "dataType"
+            }).done(() => {
+                $(`button#${actualId}`).click(() => {
+                    $(`#${actualId}`).parent().parent().fadeOut(() => {
+                        $(`#${actualId}`).parent().parent().remove()
+                    })
+                })    
+            })
+        }
     }
 
-    function DeleteMember() {
-        $('button.delete-member').click(() => {
-            var memberId = $(this).attr('member_id')
-
-            console.log(memberId);
-        })
-    }
-
+    DeleteMember(2)
     AutoCloseNavMenu()
     Click()
     ScrollToItem()
