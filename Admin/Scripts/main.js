@@ -38,7 +38,7 @@ $(function () {
         }
     }
 
-     Click()
+    Click()
     ScrollToItem()
 
     // 'li.nav-item', 'li.list-group-item', '.panel-default'
