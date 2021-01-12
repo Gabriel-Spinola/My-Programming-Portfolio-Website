@@ -51,6 +51,14 @@ $(function () {
         }
     }
 
+    function DeleteMember() {
+        $('button.delete-member').click(() => {
+            var memberId = $(this).attr('member_id')
+
+            console.log(memberId);
+        })
+    }
+
     AutoCloseNavMenu()
     Click()
     ScrollToItem()
