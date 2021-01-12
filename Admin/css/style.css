@@ -104,8 +104,7 @@ section div.panel-body .form-group {
 }
 
 section div.panel-body .form-group textarea {
-    height: 100px;
-    max-height: 500px;
+    height: 250px;
     resize: vertical;
 }
 

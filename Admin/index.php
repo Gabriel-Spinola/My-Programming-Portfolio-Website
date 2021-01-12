@@ -1,3 +1,16 @@
+<?php    
+
+    $pdo = new PDO('mysql:host=localhost;dbname=bootstrap_project', 'root', '');
+
+    $sql = $pdo -> prepare(
+        "SELECT * FROM `tb_extra`"
+    );
+
+    $sql -> execute();
+    $about = $sql -> fetch()['extra'];
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -242,16 +255,16 @@
 
                             <div class="panel-body">
 
-                                <form action="index.php">
+                                <form method="post" action="index.php">
                                 
                                     <div class="form-group">
 
                                         <label>HTMl Code:</label>
-                                        <textarea class="form-control"></textarea>
+                                        <textarea class="form-control"><?php echo $about ?></textarea>
 
                                     </div><!--form-group-->
 
-                                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                    <button type="submit" name="action" class="btn btn-outline-dark">Submit</button>
 
                                 </form>
 
