@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
         <div class="container-fluid">
-
+ 
             <a class="navbar-brand" href="#">Brand</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
