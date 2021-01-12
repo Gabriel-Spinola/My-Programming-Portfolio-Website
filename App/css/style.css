@@ -34,13 +34,13 @@ section.banner > .container
     background: rgba(0, 0, 0, .4);
 }
 
-.chamada-banner h2
+.main-banner h2
 {
     color: #26A599;
     font-size: 45px;
 }
 
-.chamada-banner p
+.main-banner p
 {
     margin: 15px;
     color: white;
@@ -48,7 +48,7 @@ section.banner > .container
     font-weight: 350 !important;
 }
 
-.chamada-banner a
+.main-banner a
 {
     display: inline-block;
     color: white;
@@ -58,18 +58,18 @@ section.banner > .container
     font-size: 19px;
 }
 
-section.cadastro-lead
+section.main-register
 {
     background: #26A599;
     padding: 20px 0;
 }
 
-section.cadastro-lead h2
+section.main-register h2
 {
     color: white;
 }
 
-section.cadastro-lead input[ type = text ]
+section.main-register input[ type = text ]
 {
     width: 85%;
     height: 40px;
@@ -77,7 +77,7 @@ section.cadastro-lead input[ type = text ]
     border: 1px solid #ccc;
 }
 
-section.cadastro-lead input[ type = submit ]
+section.main-register input[ type = submit ]
 {
     margin-top: 6px;
     width: 15%;
@@ -86,51 +86,51 @@ section.cadastro-lead input[ type = submit ]
     background-color: #ccc;
 }
 
-section.diferenciais
+section.differentials
 {
     padding: 30px 0;
     background: rgb(225, 225, 225);
 }
 
-section.diferenciais p
+section.differentials p
 {
     font-size: 18px;
 }
 
-section.diferenciais > h2
+section.differentials > h2
 {
     color: #4b4b4b;
     text-decoration: underline;
 }
 
-.diferenciais-container
+.differentials-container
 {
     margin-top: 25px;
 }
 
-.diferenciais-container svg
+.differentials-container svg
 {
     color: #26A599;
 }
 
-section.depoimento
+section.testimonial
 {
     padding: 20px 0;
 }
 
-section.depoimento h2
+section.testimonial h2
 {
     color: #4b4b4b;
     text-decoration: underline;
 }
 
-section.depoimento blockquote
+section.testimonial blockquote
 {
     color: #4b4b4b;
     font-size: 20px;
 }
 
-section.equipe h2
+section.team h2
 {
     margin: 0;
     padding: 10px 2%;
@@ -140,13 +140,13 @@ section.equipe h2
     text-decoration: underline;
 }
 
-.equipe-container
+.team-container
 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.equipe-single
+.team-single
 {
     width: 100%;
     margin: 15px 15px;
@@ -177,14 +177,14 @@ section.equipe h2
     border-radius: 50%; /* circle */
 }
 
-section.contato-plano
+section.contract-plans
 {
     padding: 30px 0;
     margin: 10px 0;
     color: #4b4b44;
 }
 
-section.contato-plano h2
+section.contract-plans h2
 {
     margin-bottom: 20px;
     margin-top: 0;
@@ -192,12 +192,12 @@ section.contato-plano h2
     font-size: 30px;
 }
 
-section.contato-plano textarea
+section.contract-plans textarea
 {
     height: 120px;
 }
 
-section.contato-plano button
+section.contract-plans button
 {
     padding: 10px 0;
     margin: 10px 0;
@@ -206,7 +206,7 @@ section.contato-plano button
     color: white;
 }
 
-section.contato-plano table
+section.contract-plans table
 {
     margin-bottom: 20px;
     margin-top: 0;
@@ -228,7 +228,7 @@ footer p
 
 @media screen and ( max-width: 1024px )
 {
-    section.cadastro-lead input[ type = submit ]
+    section.main-register input[ type = submit ]
     {
         margin-top: 6px;
         width: 15%;
@@ -247,14 +247,14 @@ footer p
 
 @media screen and ( max-width: 500px )
 {
-    section.cadastro-lead input[ type = submit ]
+    section.main-register input[ type = submit ]
     {
         margin-top: 8px;
         width: 200px;
         display: inline-block;
     }
 
-    .chamada-banner h2
+    .main-banner h2
     {
         font-size: 40px;
         color: #26A599;
