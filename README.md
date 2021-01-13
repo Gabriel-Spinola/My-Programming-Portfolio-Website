@@ -6,8 +6,8 @@
  <hr>
  
  ### How to run in your pc
- you need to use the MySql database, [you can download mine here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)<br>
- [JQuery Lib](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/)
+ you need to use the MySql database ([you can download mine here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)),<br>
+ the [JQuery Lib](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/)
  
  __*Main Page Preview*__
  
