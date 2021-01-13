@@ -2,6 +2,7 @@
  A website created with Bootstrap PHP and jQuery.
  
  the website front-end was created based on a Danki Code course project.
+ 
  All the code is free to use and modify. If you have a tip I would be very grateful to receive it, especially for my English.
  
  <hr>
