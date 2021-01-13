@@ -119,7 +119,7 @@
 
         <section class="differentials text-center">
 
-            <h2>Conheça Nossa Empresa</h2>
+            <h2>Meet Our Company</h2>
 
             <div class="container differentials-container">
 
