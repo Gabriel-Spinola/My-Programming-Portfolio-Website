@@ -1,5 +1,5 @@
 # WebSite With Bootstrap
- A website created with Bootstrap, PHP and jQuery. <br>
+ A basic website created with Bootstrap, PHP and, jQuery. <br>
  The front-end was made based on a Danki Code course project. <br>
  All the code is free to use and modify. If you have a tip I would be very grateful to receive it, especially for my English. 
  
