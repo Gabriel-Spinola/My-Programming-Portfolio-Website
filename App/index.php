@@ -1,5 +1,6 @@
 <?php 
 
+    // connect to database
     $pdo = new PDO('mysql:host=localhost;dbname=bootstrap_project', 'root', '');
 
     $sql = $pdo -> prepare(
@@ -7,6 +8,8 @@
     );
 
     $sql -> execute();
+
+    // get extra row data
     $about = $sql -> fetch()['extra'];
 
 ?>
@@ -165,6 +168,7 @@
 
                 <div class="row">
 
+                    <!-- Show Members (came from data base) -->
                     <?php
                     
                         $query = $pdo -> prepare(

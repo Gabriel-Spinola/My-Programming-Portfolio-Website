@@ -1,12 +1,15 @@
 <?php    
 
+    // connect to database
     $pdo = new PDO('mysql:host=localhost;dbname=bootstrap_project', 'root', '');
 
     $sql = $pdo -> prepare(
         "SELECT * FROM `tb_extra`"
     );
-
+    
     $sql -> execute();
+
+    // get extra row data
     $about = $sql -> fetch()['extra'];
 
 ?>
@@ -184,6 +187,7 @@
 
                             <br>
 
+                            <!-- add Member to database -->
                             <?php if(isset($_POST['add-member'])): ?>
 
                                 <?php try { ?>
@@ -193,18 +197,20 @@
                                         $name = $_POST['member-name'];
                                         $surname = $_POST['member-surname'];
                                         $description = $_POST['description'];
-
+                                        
                                         $query = $pdo -> prepare(
-                                        "INSERT INTO `tb_team`
+                                            "INSERT INTO `tb_team`
                                             VALUES (null, ?, ?, ?);"
                                         );
-
+                                        
                                         $query -> execute([
                                             $name, $surname,
                                             $description
                                         ]);
 
                                     ?>
+
+                                    <!-- Success Message -->
 
                                     <div class="alert alert-success" role="alert">
 
@@ -217,6 +223,8 @@
                                     </div>
 
                                 <?php } catch(Exception $e) { ?>
+
+                                    <!-- Error Message -->
 
                                     <div class="alert alert-danger" role="alert">
                                     
@@ -258,6 +266,7 @@
 
                                 <tbody>
                                     
+                                    <!-- show Members in the list -->
                                     <?php 
                                     
                                         $query = $pdo -> prepare(
@@ -318,7 +327,8 @@
                             </form>
 
                             <br>
-
+                                
+                            <!-- Insert About section in Main Page (with HTML code) -->
                             <?php if(isset($_POST['edit_extra'])): ?>
                                 
                                 <?php try { ?>
@@ -332,7 +342,7 @@
                                         );
 
                                         $query = $pdo -> prepare(
-                                        "INSERT INTO `tb_extra`
+                                            "INSERT INTO `tb_extra`
                                             VALUES (null, ?);"
                                         );
 
@@ -347,6 +357,7 @@
                                         
                                     ?>
 
+                                    <!-- Success Message -->
                                     <div class="alert alert-success" role="alert">
 
                                         <h4 class="alert-heading">Well done!</h4>
@@ -359,6 +370,7 @@
 
                                 <?php } catch(Exception $e) { ?>
 
+                                    <!-- Error Message -->
                                     <div class="alert alert-danger" role="alert">
                                     
                                         <p>Something went wrong, and we can't edit the extra section ):</p>
