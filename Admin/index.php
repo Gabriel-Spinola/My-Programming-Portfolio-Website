@@ -210,7 +210,7 @@
 
                                         <h4 class="alert-heading">Well done!</h4>
 
-                                        <p>Aww yeah, you <b>successfully</b> add a member to the team.</p>
+                                        <p>You <b>successfully</b> add a member to the team.</p>
 
                                         <hr>
 
@@ -351,7 +351,7 @@
 
                                         <h4 class="alert-heading">Well done!</h4>
 
-                                        <p>Aww yeah, you <b>successfully</b> edit the extra section.</p>
+                                        <p>You <b>successfully</b> edit the extra section.</p>
 
                                         <hr>
 
