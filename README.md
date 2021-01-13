@@ -5,6 +5,10 @@
  
  <hr>
  
+ ### How to run in your pc
+ you need to use the MySql database, [you can download mine here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)<br>
+ [JQuery Lib](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/)
+ 
  __*Main Page Preview*__
  
  <img src="https://github.com/Gabriel-Spinola/WebSite-WIth-Bootstrap/blob/main/App/images/prints/Main.png" width=800px>
