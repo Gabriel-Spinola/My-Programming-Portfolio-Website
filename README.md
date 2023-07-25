@@ -6,7 +6,7 @@ This is a website I created to practice using Bootstrap and PHP. If you have any
  <hr>
  
  ### How to run in your pc
-  You will need to use ([you can download mine here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)),<br>
+  You will need to use MySql ([you can download mine sql file here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)),<br>
   along with the [JQuery Lib](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/)
  
  ### Preview
