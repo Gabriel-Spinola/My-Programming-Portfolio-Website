@@ -1,14 +1,13 @@
 # WebSite With Bootstrap
 
  ### About the Project
-A website I created to practice Bootstrap and PHP.
-If you have some feedback, I would be very grateful to receive them, especially for my English.
+This is a website I created to practice using Bootstrap and PHP. If you have any feedback, I would be very grateful to receive it, especially regarding my English.
  
  <hr>
  
  ### How to run in your pc
-  you need to use the MySql database ([you can download mine here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)),<br>
-  the [JQuery Lib](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/)
+  You will need to use ([you can download mine here](https://github.com/Gabriel-Spinola/Website-With-Bootstrap/blob/main/DataBase/bootstrap_project.sql)),<br>
+  along with the [JQuery Lib](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/)
  
  ### Preview
  
@@ -23,7 +22,3 @@ If you have some feedback, I would be very grateful to receive them, especially 
  <img src="https://github.com/Gabriel-Spinola/WebSite-WIth-Bootstrap/blob/main/App/images/prints/Admin.png" width=800px>
  
  <hr>
- 
- ### Extra
- 
- Due to a jquery bug, the "attr" function always returning undefined, so a part of the javascript code seems poorly optimized.
