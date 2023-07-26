@@ -1,13 +1,11 @@
 /**Style**/
 
-.box
-{
+.box {
     position: relative;
     top: 30px;
 }
 
-section.banner
-{
+section.banner {
     padding: 210px 0;
     position: relative;
     min-height: 700px;
@@ -17,14 +15,12 @@ section.banner
     background-position: center;
 }
 
-section.banner > .container
-{
+section.banner>.container {
     position: relative;
     z-index: 2;
 }
 
-.overlay
-{
+.overlay {
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -34,22 +30,19 @@ section.banner > .container
     background: rgba(0, 0, 0, .4);
 }
 
-.main-banner h2
-{
+.main-banner h2 {
     color: #26A599;
     font-size: 45px;
 }
 
-.main-banner p
-{
+.main-banner p {
     margin: 15px;
     color: white;
     font-size: 22px;
     font-weight: 350 !important;
 }
 
-.main-banner a
-{
+.main-banner a {
     display: inline-block;
     color: white;
     background: #26A599;
@@ -58,27 +51,23 @@ section.banner > .container
     font-size: 19px;
 }
 
-section.main-register
-{
+section.main-register {
     background: #26A599;
     padding: 20px 0;
 }
 
-section.main-register h2
-{
+section.main-register h2 {
     color: white;
 }
 
-section.main-register input[ type = text ]
-{
+section.main-register input[ type=text] {
     width: 85%;
     height: 40px;
     padding-left: 8px;
     border: 1px solid #ccc;
 }
 
-section.main-register input[ type = submit ]
-{
+section.main-register input[ type=submit] {
     margin-top: 6px;
     width: 15%;
     height: 40px;
@@ -86,52 +75,43 @@ section.main-register input[ type = submit ]
     background-color: #ccc;
 }
 
-section.differentials
-{
+section.differentials {
     padding: 30px 0;
     background: rgb(225, 225, 225);
 }
 
-section.differentials p
-{
+section.differentials p {
     font-size: 18px;
 }
 
-section.differentials > h2
-{
+section.differentials>h2 {
     color: #4b4b4b;
     text-decoration: underline;
 }
 
-.differentials-container
-{
+.differentials-container {
     margin-top: 25px;
 }
 
-.differentials-container svg
-{
+.differentials-container svg {
     color: #26A599;
 }
 
-section.testimonial
-{
+section.testimonial {
     padding: 20px 0;
 }
 
-section.testimonial h2
-{
+section.testimonial h2 {
     color: #4b4b4b;
     text-decoration: underline;
 }
 
-section.testimonial blockquote
-{
+section.testimonial blockquote {
     color: #4b4b4b;
     font-size: 20px;
 }
 
-section.team h2
-{
+section.team h2 {
     margin: 0;
     padding: 10px 2%;
     text-align: center;
@@ -140,14 +120,12 @@ section.team h2
     text-decoration: underline;
 }
 
-.team-container
-{
+.team-container {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.team-single
-{
+.team-single {
     width: 100%;
     margin: 15px 15px;
     padding: 20px 10px;
@@ -157,8 +135,7 @@ section.team h2
     height: 100%;
 }
 
-.user-picture
-{
+.user-picture {
     width: 100%;
     padding-top: 100%;
     position: relative;
@@ -166,39 +143,35 @@ section.team h2
     transform: translate(-50%, 0);
 }
 
-.user-picture-child
-{
+.user-picture-child {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: #ccc;
-    border-radius: 50%; /* circle */
+    border-radius: 50%;
+    /* circle */
 }
 
-section.contract-plans
-{
+section.contract-plans {
     padding: 30px 0;
     margin: 10px 0;
     color: #4b4b44;
 }
 
-section.contract-plans h2
-{
+section.contract-plans h2 {
     margin-bottom: 20px;
     margin-top: 0;
     color: #4b4b4b;
     font-size: 30px;
 }
 
-section.contract-plans textarea
-{
+section.contract-plans textarea {
     height: 120px;
 }
 
-section.contract-plans button
-{
+section.contract-plans button {
     padding: 10px 0;
     margin: 10px 0;
     border: 1px solid #4b4b4b;
@@ -206,30 +179,25 @@ section.contract-plans button
     color: white;
 }
 
-section.contract-plans table
-{
+section.contract-plans table {
     margin-bottom: 20px;
     margin-top: 0;
 }
 
-footer
-{
+footer {
     background: #ccc;
-    margin-top: 40px;    
+    margin-top: 40px;
     padding: 10px 0;
 }
 
-footer p
-{
+footer p {
     margin: 0;
 }
 
 /**Responsive**/
 
-@media screen and ( max-width: 1024px )
-{
-    section.main-register input[ type = submit ]
-    {
+@media screen and (max-width: 1024px) {
+    section.main-register input[ type=submit] {
         margin-top: 6px;
         width: 15%;
         height: 40px;
@@ -237,25 +205,21 @@ footer p
         background-color: #ccc;
     }
 
-    .user-picture
-    {
+    .user-picture {
         width: 40%;
         padding-top: 40%;
         position: relative;
     }
 }
 
-@media screen and ( max-width: 500px )
-{
-    section.main-register input[ type = submit ]
-    {
+@media screen and (max-width: 500px) {
+    section.main-register input[ type=submit] {
         margin-top: 8px;
         width: 200px;
         display: inline-block;
     }
 
-    .main-banner h2
-    {
+    .main-banner h2 {
         font-size: 40px;
         color: #26A599;
     }

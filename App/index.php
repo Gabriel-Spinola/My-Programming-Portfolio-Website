@@ -1,7 +1,7 @@
 <?php 
 
     // connect to database
-    $pdo = new PDO('mysql:host=localhost;dbname=bootstrap_project', 'root', '');
+    $pdo = new PDO('mysql:host=localhost:3307;dbname=db_portfolio_project', 'root', '');
 
     $sql = $pdo -> prepare(
         "SELECT * FROM `tb_extra`"
