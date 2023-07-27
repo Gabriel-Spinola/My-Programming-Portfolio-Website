@@ -1,0 +1,216 @@
+/**Style**/
+
+.box {
+    position: relative;
+    top: 30px;
+}
+
+section.banner {
+    padding: 210px 0;
+    position: relative;
+    min-height: 700px;
+    background-image: url(../images/bg.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+section.banner>.container {
+    position: relative;
+    z-index: 2;
+}
+
+.overlay {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+}
+
+.main-banner h2 {
+    color: #26A599;
+    font-size: 45px;
+}
+
+.main-banner p {
+    margin: 15px;
+    color: white;
+    font-size: 22px;
+    font-weight: 350 !important;
+}
+
+.main-banner a {
+    display: inline-block;
+    color: white;
+    background: #26A599;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+section.main-register {
+    background: #26A599;
+    padding: 20px 0;
+}
+
+section.main-register h2 {
+    color: white;
+}
+
+section.main-register input[ type=text] {
+    width: 85%;
+    height: 40px;
+    padding-left: 8px;
+    border: 1px solid #ccc;
+}
+
+section.main-register input[ type=submit] {
+    margin-top: 6px;
+    width: 15%;
+    height: 40px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+
+section.differentials {
+    padding: 30px 0;
+    background: rgb(225, 225, 225);
+}
+
+section.differentials p {
+    font-size: 18px;
+}
+
+section.differentials>h2 {
+    color: #4b4b4b;
+    text-decoration: underline;
+}
+
+.differentials-container {
+    margin-top: 25px;
+}
+
+.differentials-container svg {
+    color: #26A599;
+}
+
+section.testimonial {
+    padding: 20px 0;
+}
+
+section.testimonial h2 {
+    color: #4b4b4b;
+    text-decoration: underline;
+}
+
+section.testimonial blockquote {
+    color: #4b4b4b;
+    font-size: 20px;
+}
+
+section.team h2 {
+    margin: 0;
+    padding: 10px 2%;
+    text-align: center;
+    background: #26A599;
+    color: white;
+    text-decoration: underline;
+}
+
+.team-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-single {
+    width: 100%;
+    margin: 15px 15px;
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    box-shadow: 8px 7px 5px -3px rgba(20, 20, 20, .6);
+    min-height: 200px;
+    height: 100%;
+}
+
+.user-picture {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.user-picture-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    border-radius: 50%;
+    /* circle */
+}
+
+section.contract-plans {
+    padding: 30px 0;
+    margin: 10px 0;
+    color: #4b4b44;
+}
+
+section.contract-plans h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #4b4b4b;
+    font-size: 30px;
+}
+
+section.contract-plans textarea {
+    height: 120px;
+}
+
+section.contract-plans button {
+    padding: 10px 0;
+    margin: 10px 0;
+    border: 1px solid #4b4b4b;
+    background: #4b4b4b;
+    color: white;
+}
+
+section.contract-plans table {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+/**Responsive**/
+
+@media screen and (max-width: 1024px) {
+    section.main-register input[ type=submit] {
+        margin-top: 6px;
+        width: 15%;
+        height: 40px;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+    }
+
+    .user-picture {
+        width: 40%;
+        padding-top: 40%;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section.main-register input[ type=submit] {
+        margin-top: 8px;
+        width: 200px;
+        display: inline-block;
+    }
+
+    .main-banner h2 {
+        font-size: 40px;
+        color: #26A599;
+    }
+}
