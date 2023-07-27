@@ -9,7 +9,7 @@ section.banner {
     padding: 210px 0;
     position: relative;
     min-height: 700px;
-    background-image: url(../images/bg.jpg);
+    background-image: url(../Assets/bg.jpg);
     width: 100%;
     background-size: cover;
     background-position: center;

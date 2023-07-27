@@ -1,5 +1,9 @@
 <?php
 
+interface DbConnectionI {
+    public function connect(): PDO;
+}
+
 class MySql implements DBConnectionI {
     private $pdo;
 

@@ -20,7 +20,7 @@ session_start();
 
 // ---------------------------------------------------------
 // Constants
-const INCLUDE_PATH = 'http://localhost:8080/Grffiti/';
+const INCLUDE_PATH = 'http://localhost:8080/Website-With-Bootstrap/';
 
 const DATABASE_HOST = 'localhost:3307';
 const DATABASE_NAME = 'db_portfolio_project';
@@ -34,11 +34,9 @@ enum Positions: string {
 
 // ---------------------------------------------------------
 // Imports
-require "Database/MySql.php";
+require "Database/database.php";
 
 use Controllers\HomeController;
-use Controllers\LoginController;
-use Controllers\PostController;
 
 // ---------------------------------------------------------
 // Autoload
@@ -55,5 +53,3 @@ $homeController = new HomeController(pageName: 'home');
 // ---------------------------------------------------------
 // Router
 $homeController -> addRoute('/', $homeController);
-$postController -> addRoute('/post', $postController);
-$loginController -> addRoute('/login', $loginController);

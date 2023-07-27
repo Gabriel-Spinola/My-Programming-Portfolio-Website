@@ -3,7 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+
+    <?php if(!is_null(@$pageData['css'])): ?>
+        <link href="<?php echo INCLUDE_PATH ?>Styles/<?php echo $pageData['css'] ?>" rel="stylesheet">
+    <?php endif ?>
+
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Styles/footer.css">
 
     <title>I Don't really know yet</title>
 
