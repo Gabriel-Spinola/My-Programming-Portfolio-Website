@@ -5,7 +5,7 @@ namespace Controllers;
 use Views\MainView;
 use Helpers\Router;
 
-abstract class Controller {
+abstract class PageController {
     /** Reference to a view class */
     protected object $view;
 

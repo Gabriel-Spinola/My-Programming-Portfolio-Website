@@ -4,6 +4,6 @@ namespace Controllers;
 
 use Helpers\Router;
 
-class HomeController extends Controller { 
+class HomeController extends PageController { 
     use Router;
 }
