@@ -52,4 +52,8 @@ $homeController = new HomeController(pageName: 'home');
 
 // ---------------------------------------------------------
 // Router
+if ($_SESSION[Positions::class] == Positions::User->value) {
+    
+}
+
 $homeController -> addRoute('/', $homeController);
