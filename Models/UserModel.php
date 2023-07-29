@@ -49,6 +49,18 @@ class UserModel extends Model {
         return $query;
     }
 
+    public function findByName(string $name, string $key): PDOStatement {
+        $id = -1;
+
+        foreach ($this->getData() as $key => $row) {
+            if ($row[UserFields::username] == $name && $row[UserFields::password] == $key) {
+                $id = $row[Fields::ID];
+            }
+        }
+
+        return $this->findData($id);
+    }
+
     public function insertData(array $data): bool { 
         $query = $this -> pdo -> connect() -> prepare(
             "INSERT INTO `" . UserFields::tableName . "`

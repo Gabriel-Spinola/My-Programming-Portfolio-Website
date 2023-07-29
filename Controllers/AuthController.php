@@ -14,8 +14,8 @@ use MySql;
 use Positions;
 
 class AuthController {
-    private Model $model;
-    
+    private UserModel $model;
+ 
     public function __construct(
         protected string $pageName = "",
     ) {
@@ -23,9 +23,9 @@ class AuthController {
     }
 
 
-    public static function initSession(string $user, string $password, string $position): void {
+    public static function initSession(string $username, string $password, string $position): void {
         $_SESSION['isLogged'] = true;
-        $_SESSION['user'] = $user;
+        $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $_SESSION['position'] = $position;
     }
@@ -45,15 +45,8 @@ class AuthController {
     public function login(): void {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $id = -1;
 
-        foreach ($this->model->getData() as $key => $row) {
-            if ($row[UserFields::username] == $username && $row[UserFields::password] == $password) {
-                $id = $row[Fields::ID];
-            }
-        }
-
-        $user = $this -> model -> findData($id);
+        $user = $this -> model -> findByName($username, $password);
 
         if ($user->rowCount() == 1) {
             $info = $user -> fetch();
@@ -72,7 +65,7 @@ class AuthController {
         $description = $_POST['description'];
 
         try {
-            $profilePic = ImageUploader::receiveUserImageFromPost('profile_pic');
+            // $profilePic = ImageUploader::receiveUserImageFromPost('profile_pic');
         } catch (Exception $e) {
             // TODO if exception caught user Helpers\Response to display error to client
             // or give the option to use the default profile pic
@@ -85,11 +78,11 @@ class AuthController {
         ]);
     }
 
-    public function rememberMe(string $user, string $password, int $position): void {
-        $user = $this -> model -> findData($user, $password);
+    public function rememberMe(string $username, string $password, int $position): void {
+        $user = $this -> model -> findByName($username, $password);
 
         if ($user->rowCount() == 1) {
-            self::initSession($user, $password, $position);
+            self::initSession($username, $password, $position);
         }
     }
 }
