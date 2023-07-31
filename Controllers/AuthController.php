@@ -16,9 +16,7 @@ use Positions;
 class AuthController {
     private UserModel $model;
  
-    public function __construct(
-        protected string $pageName = "",
-    ) {
+    public function __construct() {
         $this -> model = new UserModel(new MySql);
     }
 
@@ -42,10 +40,7 @@ class AuthController {
         die;
     }
 
-    public function login(): void {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
+    public function login(string $username, string $password): void {
         $user = $this -> model -> findByName($username, $password);
 
         if ($user->rowCount() == 1) {
@@ -59,11 +54,7 @@ class AuthController {
         Response::simpleResponse('error', 'Nome de usuário ou senha incorretos');
     }
     
-    public function register(): void {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $description = $_POST['description'];
-
+    public function register(string $username, string $password, string $description): void {
         try {
             // $profilePic = ImageUploader::receiveUserImageFromPost('profile_pic');
         } catch (Exception $e) {

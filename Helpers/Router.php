@@ -1,6 +1,7 @@
 <?php
 /**
  * @author Guilherme C. Grillo (from Danki Code).
+ * Some modifications were made
 */
 
 namespace Helpers;

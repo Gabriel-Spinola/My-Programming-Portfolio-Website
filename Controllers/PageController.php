@@ -9,8 +9,6 @@ abstract class PageController {
     /** Reference to a view class */
     protected object $view;
 
-    /** Reference to a model class */
-    protected object $model;
     
     public function __construct(
         protected string $pageName,

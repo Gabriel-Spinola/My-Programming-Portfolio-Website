@@ -37,6 +37,7 @@ enum Positions: string {
 require "Database/database.php";
 
 use Controllers\HomeController;
+use Controllers\SignInController;
 
 // ---------------------------------------------------------
 // Autoload
@@ -49,11 +50,13 @@ spl_autoload_register($autoload);
 // ---------------------------------------------------------
 // Controllers
 $homeController = new HomeController(pageName: 'home');
+$signInController = new SignInController(pageName: 'signin');
 
 // ---------------------------------------------------------
 // Router
-if ($_SESSION[Positions::class] == Positions::User->value) {
+if (isset($_SESSION[Positions::class]) && $_SESSION[Positions::class] == Positions::User->value) {
     
 }
 
 $homeController -> addRoute('/', $homeController);
+$signInController -> addRoute('/signin', $signInController);
