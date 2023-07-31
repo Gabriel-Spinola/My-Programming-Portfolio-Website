@@ -1,7 +1,8 @@
 <?php
     use Controllers\SignInController;
-    
+
     $signInController = new SignInController();  
+    $signInController -> rememberMe();
 ?>
 
 <main class="text-center">
@@ -30,7 +31,7 @@
                 <label class="form-check-label" for="flexCheckDefault">
                     Remember me
                 </label>
-                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="remember" id="flexCheckDefault">
             </div>
             
             <button class="btn btn-primary w-100 py-2" name="login" type="submit">Sign in</button>

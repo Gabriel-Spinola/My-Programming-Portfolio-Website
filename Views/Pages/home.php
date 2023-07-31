@@ -17,7 +17,7 @@ $userModel = new UserModel(new MySql);
 
                 <div class="col-md-12 text-center">
 
-                    <h2>&lt;Danki Code&gt;</h2>
+                    <h2>&lt;Píngola&gt;</h2>
 
                     <p>Company focused on digital marketing and web development</p>
 

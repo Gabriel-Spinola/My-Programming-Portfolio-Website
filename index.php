@@ -54,8 +54,8 @@ $signInController = new SignInController(pageName: 'signin');
 
 // ---------------------------------------------------------
 // Router
-if (isset($_SESSION[Positions::class]) && $_SESSION[Positions::class] == Positions::User->value) {
-    
+if (isset($_SESSION[Positions::class]) && $_SESSION[Positions::class] == Positions::Admin->value) {
+    // echo "<script>alert('Admin')</script>";
 }
 
 $homeController -> addRoute('/', $homeController);
