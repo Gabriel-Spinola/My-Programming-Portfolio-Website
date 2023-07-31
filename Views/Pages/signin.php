@@ -2,7 +2,10 @@
     use Controllers\SignInController;
 
     $signInController = new SignInController();  
-    $signInController -> rememberMe();
+    
+    if (isset($_COOKIE['remember'])) {
+        $signInController -> rememberMe();
+    }
 ?>
 
 <main class="text-center">

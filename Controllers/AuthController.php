@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Closure;
 use Exception;
 use Helpers\Response;
 use Helpers\Router;
@@ -40,12 +41,13 @@ class AuthController {
         die;
     }
 
-    public function login(string $username, string $password): void {
+    public function login(string $username, string $password, Closure $onSuccess): void {
         $user = $this -> model -> findByName($username, $password);
 
         if ($user->rowCount() == 1) {
             $info = $user -> fetch();
             self::initSession($username, $password, $info[UserFields::position]);
+            $onSuccess();
 
             header('Location: ' . INCLUDE_PATH);
             die; 

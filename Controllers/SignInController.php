@@ -21,14 +21,14 @@ class SignInController extends PageController {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        if (isset($_POST['remember'])) {
-            setcookie('remember', true, time() + (pow(60, 2) * 24) * 7, '/');
-            setcookie(UserFields::username, $username, time() + (pow(60, 2) * 24) * 7, '/');
-            setcookie(UserFields::password, $password, time() + (pow(60, 2) * 24) * 7, '/');
-            setcookie(UserFields::position, time() + (pow(60, 2) * 24) * 7, '/');
-        }
-
-        $this -> authController -> login($username, $password);
+        $this -> authController -> login($username, $password, onSuccess: function() use($username, $password) {
+            if (isset($_POST['remember'])) {
+                setcookie('remember', true, time() + (pow(60, 2) * 24) * 7, '/');
+                setcookie(UserFields::username, $username, time() + (pow(60, 2) * 24) * 7, '/');
+                setcookie(UserFields::password, $password, time() + (pow(60, 2) * 24) * 7, '/');
+                setcookie(UserFields::position, time() + (pow(60, 2) * 24) * 7, '/');
+            }
+        });
     }
 
     // Handles form submit and validation
@@ -41,12 +41,10 @@ class SignInController extends PageController {
     }
 
     public function rememberMe(): void {
-        if (isset($_COOKIE['remember'])) {
-            $this -> authController -> rememberMe(
-                $_COOKIE[UserFields::username],
-                $_COOKIE[UserFields::password],
-                $_COOKIE[UserFields::position],
-            );
-        }
+        $this -> authController -> rememberMe(
+            $_COOKIE[UserFields::username],
+            $_COOKIE[UserFields::password],
+            $_COOKIE[UserFields::position],
+        );
     }
 } 
