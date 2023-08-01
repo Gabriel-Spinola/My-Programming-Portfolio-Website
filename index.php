@@ -34,6 +34,7 @@ enum Position: string {
 
 // ---------------------------------------------------------
 // Imports
+include_once 'Icons.php';
 require "Database/database.php";
 
 use Controllers\HomeController;

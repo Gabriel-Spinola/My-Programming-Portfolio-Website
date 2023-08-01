@@ -17,7 +17,6 @@ class AuthController {
         $this -> model = new UserModel(new MySql);
     }
 
-
     public static function initSession(string $username, string $password, string $position): void {
         $_SESSION['isLogged'] = true;
         $_SESSION['username'] = $username;
