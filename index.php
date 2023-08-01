@@ -52,12 +52,12 @@ spl_autoload_register($autoload);
 // Controllers
 $homeController = new HomeController(pageName: 'home');
 $signInController = new SignInController(pageName: 'signin');
-$adminController = new AdminController(pageName: 'Admin/admin');
+$adminController = new AdminController(pageName: 'admin');
 
 // ---------------------------------------------------------
 // Router
 if (isset($_SESSION[Position::class]) && $_SESSION[Position::class] == Position::Admin->value) {
-    $adminController -> addRoute('Admin/', $adminController);
+    $adminController -> addRoute('/adm', $adminController);
 }
 
 $homeController -> addRoute('/', $homeController);

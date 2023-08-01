@@ -48,13 +48,12 @@ class UserModel extends Model {
 
     public function findByName(string $name, string $key): PDOStatement {
         $id = -1;
-        echo '<br>';
-        echo $name;
-        echo $key;
-
+    
         foreach ($this->getData() as $$key => $row) {
             if ($row[UserFields::username] == $name && $row[UserFields::password] == $key) {
                 $id = $row[Fields::ID];
+
+                break;
             }
         }
 

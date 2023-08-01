@@ -42,9 +42,6 @@ class AuthController {
     }
 
     public function login(string $username, string $password, Closure $onSuccess): void {
-        echo $username;
-        echo $password;
-
         $user = $this -> model -> findByName($username, $password);
 
         if ($user->rowCount() == 1) {

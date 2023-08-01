@@ -55,7 +55,7 @@ use Controllers\SignInController;
             <button class="btn btn-primary w-100 py-2" name="login" type="submit">Sign in</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
             
-            <a class="small" href="<?php echo INCLUDE_PATH ?>login?register">Register</a>
+            <a class="small" href="<?php echo INCLUDE_PATH ?>signin?register">Register</a>
         </form>
 
     <?php else: ?>
@@ -92,7 +92,7 @@ use Controllers\SignInController;
             <button class="btn btn-primary w-100 py-2" type="submit" name="register">Enviar</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
 
-            <a class="small" href="<?php echo INCLUDE_PATH ?>login">login</a>
+            <a class="small" href="<?php echo INCLUDE_PATH ?>signin">login</a>
         </form>
 
     <?php endif ?>

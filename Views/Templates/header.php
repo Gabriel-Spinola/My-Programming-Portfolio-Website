@@ -43,7 +43,10 @@ use Controllers\AuthController;
                         <li class="nav-item active"> <a class="nav-link" aria-current="page" href="<?php echo INCLUDE_PATH ?>">Home</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="<?php echo INCLUDE_PATH ?>about">About</a> </li>
                         <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>contact" tabindex="-1">contact</a> </li>
-                        <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>" tabindex="-1"> <?php echo $_SESSION[Position::class] ?> </a> </li>
+
+                        <?php if ($_SESSION[Position::class] == Position::Admin->value): ?>
+                            <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>adm" tabindex="-1"> Admin Panel </a> </li>
+                        <?php endif ?>
 
                         <?php if (AuthController::isLogged()): ?>
                             <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>signin?logout" tabindex="-1">Logout</a></li>
