@@ -11,7 +11,8 @@ use Controllers\AuthController;
  if(!is_null(@$pageData['css'])): ?>
         <link href="<?php echo INCLUDE_PATH ?>Styles/<?php echo $pageData['css'] ?>" rel="stylesheet">
     <?php endif ?>
-
+    
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Styles/header.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Styles/footer.css">
 
     <title>I Don't really know yet</title>

@@ -1,0 +1,33 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+nav .active a {
+    color: #69e1e6 !important;
+}
+
+header.header {
+    background-color: #6976c0;
+    color: rgb(255, 255, 255);
+}
+
+header .header-text {
+    padding: 5px 10px;
+    position: relative;
+}
+
+header .gear-icon {
+    position: relative;
+    margin-bottom: 5.5px;
+    margin-right: 10px;
+}
+
+header .cup-icon {
+    position: relative;
+    margin-right: 10px;
+}
+
+header p {
+    margin-top: 15px;
+    position: relative;
+}
