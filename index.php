@@ -27,7 +27,7 @@ const DATABASE_NAME = 'db_portfolio_project';
 const DATABASE_USER = 'root';
 const DATABASE_PASSWORD = '';
 
-enum Positions: string {
+enum Position: string {
     case User = 'USER';
     case Admin = 'ADMIN';
 };
@@ -38,6 +38,7 @@ require "Database/database.php";
 
 use Controllers\HomeController;
 use Controllers\SignInController;
+use Controllers\AdminController;
 
 // ---------------------------------------------------------
 // Autoload
@@ -51,11 +52,12 @@ spl_autoload_register($autoload);
 // Controllers
 $homeController = new HomeController(pageName: 'home');
 $signInController = new SignInController(pageName: 'signin');
+$adminController = new AdminController(pageName: 'Admin/admin');
 
 // ---------------------------------------------------------
 // Router
-if (isset($_SESSION[Positions::class]) && $_SESSION[Positions::class] == Positions::Admin->value) {
-    // echo "<script>alert('Admin')</script>";
+if (isset($_SESSION[Position::class]) && $_SESSION[Position::class] == Position::Admin->value) {
+    $adminController -> addRoute('Admin/', $adminController);
 }
 
 $homeController -> addRoute('/', $homeController);

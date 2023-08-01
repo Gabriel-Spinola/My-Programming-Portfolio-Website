@@ -4,7 +4,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <?php if(!is_null(@$pageData['css'])): ?>
+    <?php
+
+use Controllers\AuthController;
+
+ if(!is_null(@$pageData['css'])): ?>
         <link href="<?php echo INCLUDE_PATH ?>Styles/<?php echo $pageData['css'] ?>" rel="stylesheet">
     <?php endif ?>
 
@@ -39,6 +43,13 @@
                         <li class="nav-item active"> <a class="nav-link" aria-current="page" href="<?php echo INCLUDE_PATH ?>">Home</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="<?php echo INCLUDE_PATH ?>about">About</a> </li>
                         <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>contact" tabindex="-1">contact</a> </li>
+                        <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>" tabindex="-1"> <?php echo $_SESSION[Position::class] ?> </a> </li>
+
+                        <?php if (AuthController::isLogged()): ?>
+                            <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>signin?logout" tabindex="-1">Logout</a></li>
+                        <?php else: ?>
+                            <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>signin" tabindex="-1">Login</a></li>
+                        <?php endif ?>
 
                     </ul><!--navbar-nav--->
 

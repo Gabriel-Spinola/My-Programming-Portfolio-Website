@@ -6,6 +6,7 @@
 
 namespace Helpers;
 
+use Closure;
 use Controllers\PageController;
 
 trait Router
@@ -16,7 +17,7 @@ trait Router
 		return self :: $executed;
 	}
 	
-	public function addRoute($path, PageController $arg) {
+	public function addRoute($path, PageController $arg, Closure $condition = null) {
 		$url = @$_GET['url'];
 
 		if ($path == '') {
@@ -41,6 +42,12 @@ trait Router
 
 		
 		if ($url == $path) {
+			if (!is_null($condition)) {
+				$condition();
+
+				return;
+			}
+
 			self :: $executed = true;
 
 			$arg->execute();
@@ -70,6 +77,12 @@ trait Router
 			}
 
 			if ($ok) {
+				if (!is_null($condition)) {
+					$condition();
+					
+					return;
+				}
+
 				self :: $executed = true;
 
 				$arg->execute();

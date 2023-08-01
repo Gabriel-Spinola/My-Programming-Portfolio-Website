@@ -12,7 +12,7 @@ use Models\Model;
 use Models\UserFields;
 use Models\UserModel;
 use MySql;
-use Positions;
+use Position;
 
 class AuthController {
     private UserModel $model;
@@ -26,7 +26,7 @@ class AuthController {
         $_SESSION['isLogged'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $_SESSION['position'] = $position;
+        $_SESSION[Position::class] = $position;
     }
 
     public static function isLogged(): bool {
@@ -42,10 +42,14 @@ class AuthController {
     }
 
     public function login(string $username, string $password, Closure $onSuccess): void {
+        echo $username;
+        echo $password;
+
         $user = $this -> model -> findByName($username, $password);
 
         if ($user->rowCount() == 1) {
             $info = $user -> fetch();
+
             self::initSession($username, $password, $info[UserFields::position]);
             $onSuccess();
 
@@ -67,7 +71,7 @@ class AuthController {
         }
 
         $this -> model -> insertData([
-            $username, $password, $description, Positions::User->value, $profilePic
+            $username, $password, $description, Position::User->value, $profilePic
         ]);
     }
 

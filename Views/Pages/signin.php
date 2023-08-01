@@ -1,7 +1,22 @@
 <?php
-    use Controllers\SignInController;
+
+use Controllers\AuthController;
+use Controllers\SignInController;
 
     $signInController = new SignInController();  
+
+    if (isset($_GET['logout'])) {
+        AuthController::logout();
+
+        header('Location: ' . INCLUDE_PATH);
+        die;
+    }
+    
+    if (AuthController::isLogged()) {
+        header('Location: ' . INCLUDE_PATH);
+
+        die;
+    }
     
     if (isset($_COOKIE['remember'])) {
         $signInController -> rememberMe();
@@ -26,7 +41,7 @@
             </div>
             
             <div class="form-floating m-2">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                 <label for="floatingPassword">Password</label>
             </div>
             
@@ -46,7 +61,7 @@
     <?php else: ?>
         <?php
             if (isset($_POST['register'])) {
-                $signInController -> handleLoginForm();
+                $signInController -> handleRegisterForm();
             }
         ?>
 

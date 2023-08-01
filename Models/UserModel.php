@@ -10,7 +10,6 @@ class UserFields extends Fields {
     public const tableName = "tb_users";
 
     public const username = 'name';
-    public const surname = 'surname';
     public const password = 'password';
     public const description = 'description';
     public const position = 'position';
@@ -18,7 +17,7 @@ class UserFields extends Fields {
 
     public static function getFields(): array {
         return [
-            self::username, self::surname,
+            self::username, self::password,
             self::description,
             self::position, self::profilePic
         ];
@@ -42,17 +41,18 @@ class UserModel extends Model {
              WHERE `" . Fields::ID . "`=?"
         );
 
-        $query->execute([
-            $id
-        ]);
+        $query->execute([$id]);
         
         return $query;
     }
 
     public function findByName(string $name, string $key): PDOStatement {
         $id = -1;
+        echo '<br>';
+        echo $name;
+        echo $key;
 
-        foreach ($this->getData() as $key => $row) {
+        foreach ($this->getData() as $$key => $row) {
             if ($row[UserFields::username] == $name && $row[UserFields::password] == $key) {
                 $id = $row[Fields::ID];
             }
