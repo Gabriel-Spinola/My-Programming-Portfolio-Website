@@ -13,6 +13,6 @@ abstract class Model {
     public abstract function getData(): array;
     public abstract function findData(string $id): PDOStatement;
     public abstract function insertData(array $data): bool;
-    public abstract function updateData(): bool;
+    public abstract function updateData(array $newData): bool;
     public abstract function deleteData(int $id): bool;
 }

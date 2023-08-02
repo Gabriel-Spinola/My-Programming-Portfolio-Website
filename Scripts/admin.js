@@ -86,7 +86,7 @@ $(function () {
 })
 
 function editRedirect(id) {
-    changeLocation(`adm`, true)
+    changeLocation(`adm?edit=true&id=${id}`, true)
 }
 
 function deleteRedirect(id) {

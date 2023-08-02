@@ -69,7 +69,7 @@ class UserModel extends Model {
         return $query -> execute($data);
     }
 
-    public function updateData(): bool {
+    public function updateData(array $newData): bool {
         $query = $this -> pdo -> connect() -> prepare(
             "UPDATE `" . UserFields::tableName . "`
              SET `" .
@@ -81,7 +81,7 @@ class UserModel extends Model {
              WHERE `" . UserFields::ID . "` = ?"
         ); 
         
-        return $query -> execute(UserFields::getFields());
+        return $query -> execute($newData);
     }
 
     public function deleteData(int $id): bool {

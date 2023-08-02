@@ -1,10 +1,25 @@
 <?php
     use Controllers\AdminController;
+    use Models\Fields;
+    use Models\UserFields;
 
     $controller = new AdminController();
+    $userData = null;
+    $changeID = $_GET['edit'] ? $_GET['id'] : -1;
+
+    echo '<h1>'. $changeID .'</h1>';
 
     if (isset($_GET['delete'])) {
-        $controller->handleMembersList('delete', intval($_GET['delete']));
+        $selectedUserID = intval($_GET['delete']); 
+        $controller->handleMembersListDeletion('delete', $selectedUserID);
+    }
+
+    if ($changeID != -1) {
+        foreach($controller -> getUserData() as $key => $row) {
+            if ($row[Fields::ID] == $changeID) {
+                $userData = $row;
+            }
+        }
     }
 ?>
 
@@ -157,25 +172,45 @@
                                 <div class="form-group">
 
                                     <label for="member-name">Member Name:</label>
-                                    <input type="text" name="member-name" class="form-control" id="member-name">
+                                    <input 
+                                        type="text" 
+                                        name="member-name" 
+                                        class="form-control" 
+                                        id="member-name"
+                                        value="<?php print $userData[UserFields::username] ?? '' ?>"
+                                    />
 
                                     <label for="member-surname">Member Password</label>
-                                    <input type="text" name="member-password" class="form-control" id="member-surname">
+                                    <input 
+                                        type="text" 
+                                        name="member-password" 
+                                        class="form-control" 
+                                        id="member-surname"
+                                        value="<?php print $userData[UserFields::password] ?? '' ?>"
+                                    />
                                     
                                     <label>Member Description</label>
-                                    <textarea name="member-description" class="form-control"></textarea>
+                                    <textarea name="member-description" class="form-control"><?php 
+                                        print $userData[UserFields::description] ?? '' 
+                                    ?></textarea>
 
-                                    <label for="member-surname">Member Surname</label>
+                                    <label for="member-surname">Member Position</label>
                                     <select name="member-position" class="form-control" id="member-position">
-                                        <option value="<?php echo Position::User->value ?>" select>User</option>
-                                        <option value="<?php echo Position::Admin->value ?>">Amin</option>
+                                        <option
+                                            value="<?php echo Position::User->value ?>" 
+                                            <?php echo ($userData[UserFields::position] ?? 'selected') == Position::User->value ? 'selected' : ''  ?>
+                                        >User</option>
+                                        <option 
+                                            value="<?php echo Position::Admin->value ?>"
+                                            <?php echo ($userData[UserFields::position] ?? '') == Position::Admin->value ? 'selected' : ''  ?>
+                                        >Admin</option>
                                     </select>
 
                                 </div><!--form-group-->
 
                                 <!-- <input type="hidden" name="add-member" value=""> -->
 
-                                <input type="submit" name="add-member" class="btn btn-outline-dark">Submit</input>
+                                <input type="submit" name="<?php print $changeID == -1 ? 'add-member' : 'edit-member' ?>" class="btn btn-outline-dark"><?php print $changeID == -1 ? 'Add Member' : 'Change' ?></input>
 
                             </form>
 
@@ -211,19 +246,20 @@
 
                                 <tbody>
 
-                                    <?php foreach ($controller -> displayUsers() as $key => $row) : ?>
+                                    <?php foreach ($controller -> getUserData() as $key => $row) : ?>
 
                                         <tr>
                                             
                                             <td><?php echo $row['name'] ?></td>
                                             <td>
-                                                <button class="btn btn-danger delete-member" onclick="deleteRedirect(<?php echo $row['id'] ?>)">delete</button>
+                                                <button class="btn btn-danger delete-member" onclick="editRedirect(<?php echo $row['id'] ?>)">edit</button>
 
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
                                                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
                                                 </svg>
                                             </td>
-                                            <td><button class="btn btn-danger delete-member" member_id="<?php echo $row['id'] ?>">Delete</button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
+                                            
+                                            <td><button class="btn btn-danger delete-member" onclick="deleteRedirect(<?php echo $row['id'] ?>)">Delete</button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
                                                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
                                                 </svg></td>
 

@@ -20,7 +20,7 @@ class AdminController extends PageController {
         $this -> userModel = new UserModel(new MySql);
     }
 
-    public function handleAddMemberForm() { 
+    public function handleAddMemberForm(): void { 
         $name = $_POST['member-name'];
         $password = $_POST['member-password'];
         $description = $_POST['member-description'];
@@ -34,22 +34,25 @@ class AdminController extends PageController {
         }
     }
 
-    public function handleMembersList(string $action, string | int $id) {
-        switch ($action) {
-            case 'delete':
-                $this->userModel->deleteData($id);
-            break;
-            
-            case 'edit':
-                echo 'edit';
-            break;
+    public function handleEditMemberForm() {
+        $name = $_POST['member-name'];
+        $password = $_POST['member-password'];
+        $description = $_POST['member-description'];
+        $position = $_POST['member-position'];
 
-            default:
-                echo 'Invalid Member List action';
+        if ($this -> userModel -> updateData([$name, $password, $description, $position, null])) {
+            Response::simpleResponse('success', 'You <strong>successfully</strong> add a member to the team.');
+        }
+        else {
+            Response::simpleResponse('success', "Something went wrong, and we can't edit the extra section ):");
         }
     }
 
-    public function displayUsers() {
+    public function handleMembersListDeletion(int $userID): void {
+        $this->userModel->deleteData($userID);
+    }
+
+    public function getUserData() {
         return $this -> userModel -> getData();
     }
 }
