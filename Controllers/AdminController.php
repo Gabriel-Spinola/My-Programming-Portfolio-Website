@@ -30,21 +30,21 @@ class AdminController extends PageController {
             Response::simpleResponse('success', 'You <strong>successfully</strong> add a member to the team.');
         }
         else {
-            Response::simpleResponse('success', "Something went wrong, and we can't edit the extra section ):");
+            Response::simpleResponse('error', "Something went wrong, and we can't edit the extra section ):");
         }
     }
 
-    public function handleEditMemberForm() {
+    public function handleEditMemberForm(int $id) {
         $name = $_POST['member-name'];
         $password = $_POST['member-password'];
         $description = $_POST['member-description'];
         $position = $_POST['member-position'];
 
-        if ($this -> userModel -> updateData([$name, $password, $description, $position, null])) {
+        if ($this -> userModel -> updateData([$name, $password, $description, $position, null, $id])) {
             Response::simpleResponse('success', 'You <strong>successfully</strong> add a member to the team.');
         }
         else {
-            Response::simpleResponse('success', "Something went wrong, and we can't edit the extra section ):");
+            Response::simpleResponse('error', "Something went wrong, and we can't edit the extra section ):");
         }
     }
 

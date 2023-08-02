@@ -7,11 +7,9 @@
     $userData = null;
     $changeID = $_GET['edit'] ? $_GET['id'] : -1;
 
-    echo '<h1>'. $changeID .'</h1>';
-
     if (isset($_GET['delete'])) {
         $selectedUserID = intval($_GET['delete']); 
-        $controller->handleMembersListDeletion('delete', $selectedUserID);
+        $controller->handleMembersListDeletion($selectedUserID);
     }
 
     if ($changeID != -1) {
@@ -162,6 +160,10 @@
                         <div class="panel-body">
 
                             <?php 
+                                if (isset($_POST['edit-member'])) {
+                                    $controller -> handleEditMemberForm($changeID);
+                                }
+
                                 if (isset($_POST['add-member'])) {
                                     $controller -> handleAddMemberForm();
                                 }
