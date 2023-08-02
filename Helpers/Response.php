@@ -13,61 +13,60 @@ use InvalidArgumentException;
  * - Get a response to test safely features, and Also giving a log for the client
  * 
  * https://www.php.net/manual/en/language.exceptions.extending.php
-*/
-class Response {
+ */
+class Response
+{
     /**
      * Client log 
-    */
-    public static function simpleResponse($response, $message): void { ?>
+     */
+    public static function simpleResponse($response, $message): void
+    { ?>
 
-        <?php if ($response == 'success'): ?>
-            
-            <div class="alert-box">
+        <?php if ($response == 'success') : ?>
 
-                <div class="success">
-                    <i class="fa fa-check" aria-hidden="true"></i> 
-                    <?php print $message ?>
-                </div>
+            <div class="alert alert-success" role="alert">
 
-            </div><!--alert-box-->
+                <h4 class="alert-heading">Well done!</h4>
 
-        <?php elseif ($response == 'error'): ?>
+                <p><?php print $message ?></p>
 
-            <div class="alert-box">
+                <hr>
 
-                <div class="error">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                    <?php print $message ?>
-                </div>
+            </div>
 
-            </div><!--alert-box-->
+        <?php elseif ($response == 'error') : ?>
 
-        <?php else: 
-            
+            <div class="alert alert-danger" role="alert">
+
+                <p><?php print $message ?></p>
+
+            </div>
+
+        <?php else :
+
             @throw new InvalidArgumentException('Incorrect Response');
-            
+
         ?>
-        
+
         <?php endif ?>
 
-    <?php }
+<?php }
 
     /**
      * Test and log 
-    */
-    public static function detailResponse(bool $response, Closure | string $ifSuccess, Closure $ifError) {
+     */
+    public static function detailResponse(bool $response, Closure | string $ifSuccess, Closure $ifError)
+    {
         if ($response) {
             if (is_string($ifSuccess)) {
-                self :: simpleResponse(
+                self::simpleResponse(
                     response: 'success',
                     message: $ifError
                 );
-            }
-            else {
+            } else {
                 $ifSuccess();
             }
-        }
-        else {
+        } else {
             $ifError();
         }
     }

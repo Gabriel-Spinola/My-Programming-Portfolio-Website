@@ -84,3 +84,11 @@ $(function () {
     Click()
     ScrollToItem()
 })
+
+function editRedirect(id) {
+    changeLocation(`adm`, true)
+}
+
+function deleteRedirect(id) {
+    changeLocation(`adm?delete=${id}`, true);
+}

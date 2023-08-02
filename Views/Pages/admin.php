@@ -2,8 +2,14 @@
     use Controllers\AdminController;
 
     $controller = new AdminController();
-    $controller -> SayHello();
+
+    if (isset($_GET['delete'])) {
+        $controller->handleMembersList('delete', intval($_GET['delete']));
+    }
 ?>
+
+<script src="<?php echo INCLUDE_PATH ?>Scripts/changeLocation.js"></script>
+<script src="<?php echo INCLUDE_PATH ?>Scripts/admin.js"></script>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
@@ -175,55 +181,6 @@
 
                             <br>
 
-                            <!-- add Member to database -->
-                            <?php if (isset($_POST['add-member'])) : ?>
-
-                                <?php try { ?>
-
-                                    <?php
-
-                                    // $name = $_POST['member-name'];
-                                    // $surname = $_POST['member-surname'];
-                                    // $description = $_POST['description'];
-
-                                    // $query = $pdo->prepare(
-                                    //     "INSERT INTO `tb_team`
-                                    //         VALUES (null, ?, ?, ?);"
-                                    // );
-
-                                    // $query->execute([
-                                    //     $name, $surname,
-                                    //     $description
-                                    // ]);
-
-                                    ?>
-
-                                    <!-- Success Message -->
-
-                                    <div class="alert alert-success" role="alert">
-
-                                        <h4 class="alert-heading">Well done!</h4>
-
-                                        <p>You <b>successfully</b> add a member to the team.</p>
-
-                                        <hr>
-
-                                    </div>
-
-                                <?php } catch (Exception $e) { ?>
-
-                                    <!-- Error Message -->
-
-                                    <div class="alert alert-danger" role="alert">
-
-                                        <p>Something went wrong, and we can't edit the extra section ):</p>
-
-                                    </div>
-
-                                <?php } ?>
-
-                            <?php endif ?>
-
                         </div><!--panel-body-->
 
                     </div><!--panel-default-->
@@ -245,7 +202,7 @@
                                     <tr>
 
                                         <th>First name</th>
-                                        <th>Last name</th>
+                                        <th>Edit Member</th>
                                         <th>Delete Member</th>
 
                                     </tr>
@@ -254,25 +211,18 @@
 
                                 <tbody>
 
-                                    <!-- show Members in the list -->
-                                    <?php
-
-                                    $query = $pdo->prepare(
-                                        "SELECT * FROM `tb_team`;"
-                                    );
-
-                                    $query->execute();
-
-                                    $selectMember = $query->fetchAll();
-
-                                    ?>
-
-                                    <?php foreach ($selectMember as $key => $row) : ?>
+                                    <?php foreach ($controller -> displayUsers() as $key => $row) : ?>
 
                                         <tr>
-
+                                            
                                             <td><?php echo $row['name'] ?></td>
-                                            <td><?php echo $row['surname'] ?></td>
+                                            <td>
+                                                <button class="btn btn-danger delete-member" onclick="deleteRedirect(<?php echo $row['id'] ?>)">delete</button>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
+                                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                                </svg>
+                                            </td>
                                             <td><button class="btn btn-danger delete-member" member_id="<?php echo $row['id'] ?>">Delete</button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" style="color: red;">
                                                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
                                                 </svg></td>
