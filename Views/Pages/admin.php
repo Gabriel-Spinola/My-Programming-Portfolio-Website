@@ -1,3 +1,10 @@
+<?php
+    use Controllers\AdminController;
+
+    $controller = new AdminController();
+    $controller -> SayHello();
+?>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
     <div class="container-fluid">
@@ -133,24 +140,36 @@
 
                         <div class="panel-body">
 
-                            <form method="post" action="index.php">
+                            <?php 
+                                if (isset($_POST['add-member'])) {
+                                    $controller -> handleAddMemberForm();
+                                }
+                            ?>
+
+                            <form method="post">
 
                                 <div class="form-group">
 
                                     <label for="member-name">Member Name:</label>
                                     <input type="text" name="member-name" class="form-control" id="member-name">
 
-                                    <label for="member-surname">Member Surname</label>
-                                    <input type="text" name="member-surname" class="form-control" id="member-surname">
-
+                                    <label for="member-surname">Member Password</label>
+                                    <input type="text" name="member-password" class="form-control" id="member-surname">
+                                    
                                     <label>Member Description</label>
-                                    <textarea name="description" class="form-control"></textarea>
+                                    <textarea name="member-description" class="form-control"></textarea>
+
+                                    <label for="member-surname">Member Surname</label>
+                                    <select name="member-position" class="form-control" id="member-position">
+                                        <option value="<?php echo Position::User->value ?>" select>User</option>
+                                        <option value="<?php echo Position::Admin->value ?>">Amin</option>
+                                    </select>
 
                                 </div><!--form-group-->
 
-                                <input type="hidden" name="add-member" value="">
+                                <!-- <input type="hidden" name="add-member" value=""> -->
 
-                                <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                <input type="submit" name="add-member" class="btn btn-outline-dark">Submit</input>
 
                             </form>
 
@@ -163,19 +182,19 @@
 
                                     <?php
 
-                                    $name = $_POST['member-name'];
-                                    $surname = $_POST['member-surname'];
-                                    $description = $_POST['description'];
+                                    // $name = $_POST['member-name'];
+                                    // $surname = $_POST['member-surname'];
+                                    // $description = $_POST['description'];
 
-                                    $query = $pdo->prepare(
-                                        "INSERT INTO `tb_team`
-                                            VALUES (null, ?, ?, ?);"
-                                    );
+                                    // $query = $pdo->prepare(
+                                    //     "INSERT INTO `tb_team`
+                                    //         VALUES (null, ?, ?, ?);"
+                                    // );
 
-                                    $query->execute([
-                                        $name, $surname,
-                                        $description
-                                    ]);
+                                    // $query->execute([
+                                    //     $name, $surname,
+                                    //     $description
+                                    // ]);
 
                                     ?>
 

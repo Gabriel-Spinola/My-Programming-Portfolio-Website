@@ -63,7 +63,7 @@ class UserModel extends Model {
     public function insertData(array $data): bool { 
         $query = $this -> pdo -> connect() -> prepare(
             "INSERT INTO `" . UserFields::tableName . "`
-             VALUES (null, ?, ?, ?, ?, ?)"
+             VALUES (null, ?, ?, ?, ?, null)"
         ); 
         
         return $query -> execute($data);

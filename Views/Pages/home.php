@@ -166,7 +166,7 @@ $userModel = new UserModel(new MySql);
 
                                 <div class="col-md-9 col-md-offset-1">
 
-                                    <h3><?php echo $row['name'] ?> <?php echo $row['surname'] ?></h3>
+                                    <h3><?php echo $row['name'] ?></h3>
 
                                     <p><?php echo $row['description'] ?></p>
 
