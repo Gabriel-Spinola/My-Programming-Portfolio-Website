@@ -21,6 +21,7 @@
     }
 ?>
 
+<script src="<?php echo INCLUDE_PATH ?>Scripts/code.jquery.com_jquery-3.7.0.min.js"></script>
 <script src="<?php echo INCLUDE_PATH ?>Scripts/changeLocation.js"></script>
 <script src="<?php echo INCLUDE_PATH ?>Scripts/admin.js"></script>
 
