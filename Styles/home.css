@@ -1,4 +1,22 @@
+@font-face {
+    font-family: "FFFForwa";
+    src: url(../Assets/Fonts/FFFFORWA.TTF);
+}
+
+@font-face {
+    font-family: Joystix;
+    src: url(../Assets/Fonts/joystix\ monospace.otf);
+}
+
 /**Style**/
+
+* {
+    font-family: "FFFForwa" !important;
+}
+
+* p {
+    font-family: FFFForwa !important;
+}
 
 .box {
     position: relative;

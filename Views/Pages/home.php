@@ -140,7 +140,7 @@ $userModel = new UserModel(new MySql);
 
     <section class="team">
 
-        <h2>Team</h2>
+        <h2>My Games</h2>
 
         <div class="container team-container">
 
@@ -158,7 +158,9 @@ $userModel = new UserModel(new MySql);
 
                                     <div class="user-picture">
 
-                                        <div class="user-picture-child"></div>
+                                        <div class="user-picture-child">
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                        </div>
 
                                     </div>
 
@@ -166,9 +168,13 @@ $userModel = new UserModel(new MySql);
 
                                 <div class="col-md-9 col-md-offset-1">
 
-                                    <h3><?php echo $row['name'] ?></h3>
+                                    <h3>Hell End</h3>
 
-                                    <p><?php echo $row['description'] ?></p>
+                                    <p>(PT-BR)
+
+                                        Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                        <br><br>
+                                        Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos</p>
 
                                 </div><!--col-md-9-->
 

@@ -29,7 +29,7 @@ use Controllers\AuthController;
 
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">Bootstrap</a>
+                <a class="navbar-brand" href="#">Spinola</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 
