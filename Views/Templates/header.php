@@ -8,7 +8,7 @@
 
 use Controllers\AuthController;
 
- if(!is_null(@$pageData['css'])): ?>
+    if(!is_null(@$pageData['css'])): ?>
         <link href="<?php echo INCLUDE_PATH ?>Styles/<?php echo $pageData['css'] ?>" rel="stylesheet">
     <?php endif ?>
     

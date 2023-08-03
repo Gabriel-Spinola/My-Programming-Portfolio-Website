@@ -126,7 +126,7 @@ $userModel = new UserModel(new MySql);
 
                     <blockquote>
 
-                        <p>"Phasellus et vehicula velit. Suspendisse ut faucibus lectus. Curabitur fermentum lacus odio, eget egestas turpis finibus in. Aliquam eget urna condimentum, lobortis nisl quis, congue libero. Maecenas non velit consectetur, ultrices justo sed, gravida purus. Phasellus efficitur tempus dolor, sit amet vehicula ligula condimentum quis. Ut euismod, urna ac ultricies lacinia, lectus justo vulputate sem, vitae faucibus eros mi quis nisl"</p>
+                        <p>"Phasellus et vehicula velit. Suspendisse ut faucibus lectus. Curabitur fermentum lacus odio, eget egestas turpis finibus in. Aliquam eget urna condimentum, lobortis nisl quis, congue libero. Maecenas non velit consectetur, ultrices justo sed, gravida purus. Phasellus efficitur tempus dolor, sit amet vehicula ligula condimentum quis. Ut euismod, urna ac ultricies lacinia, lectus justo vulputate sem, vitae faucibus eros mi quis nisl"</p> #1
 
                     </blockquote>
 
@@ -147,6 +147,12 @@ $userModel = new UserModel(new MySql);
             <div class="row">
 
                 <?php foreach ($userModel->getData() as $key => $row) : ?>
+
+                    <?php 
+                        if (isset($_POST['submit-comment'])) {
+                            
+                        }    
+                    ?>
 
                     <div class="col-md-6">
 
@@ -179,6 +185,20 @@ $userModel = new UserModel(new MySql);
                                 </div><!--col-md-9-->
 
                             </div><!--row-->
+
+                            <form method="post">
+                                <input
+                                    type="hidden"
+                                    name="owner-name" 
+                                    value="<?php print $_SESSION['username'] ?? '' ?>"
+                                >
+
+                                <textarea name="comment" id="comment">
+
+                                </textarea>
+
+                                <input type="submit" name="submit-comment" id="submit-comment" value="Enviar Comentário">
+                            </form>
 
                         </div><!--team-single-->
 

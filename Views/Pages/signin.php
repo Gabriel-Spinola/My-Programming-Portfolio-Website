@@ -1,7 +1,6 @@
 <?php
-
-use Controllers\AuthController;
-use Controllers\SignInController;
+    use Controllers\AuthController;
+    use Controllers\SignInController;
 
     $signInController = new SignInController();  
 
