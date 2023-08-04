@@ -7,6 +7,18 @@ use Models\UserModel;
 $userModel = new UserModel(new MySql);
 $controller = new HomeController();
 
+if (!isset($_SESSION['isLogged'])) {
+    if (
+        isset($_POST['submit-comment-game1']) ||
+        isset($_POST['submit-comment-game2']) || 
+        isset($_POST['submit-comment-game3']) ||
+        isset($_POST['submit-comment-game4'])
+    ) {
+        header('Location: ' . INCLUDE_PATH . 'signin');
+        die;
+    }
+}
+
 ?>
 <!-- https://thenounproject.com/icon/pixel-star-135344/
 https://thenounproject.com/icon/pixel-star-135350/
@@ -117,10 +129,10 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 <div class="col-md-6">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-joystick mb-2" viewBox="0 0 16 16">
-  <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
-  <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
-</svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-joystick mb-2" viewBox="0 0 16 16">
+                        <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z" />
+                        <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z" />
+                    </svg>
 
                     <h2>C#/Unity/Monogame</h2>
 
@@ -130,9 +142,9 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 <div class="col-md-6">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-browser-chrome mb-2" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-</svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-browser-chrome mb-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg>
 
                     <h2>PHP/JavaScript</h2>
 
@@ -199,6 +211,8 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
         <div class="container team-container">
 
             <?php
+
+
             if (isset($_POST['submit-comment-game1'])) {
                 $controller->handleCommentSubmission('1');
             }
@@ -645,9 +659,9 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                     </table><!--table-bordered-->
 
-            <!-- </div>col-md-6 -->
+                <!-- </div>col-md-6 -->
 
-        </div><!--row-->
+            </div><!--row-->
 
         </div><!--container-->
 
