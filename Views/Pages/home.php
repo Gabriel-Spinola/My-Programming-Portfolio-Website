@@ -193,7 +193,7 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
     <section class="team">
 
-        <h2>My Games</h2>
+        <h2>Meus Jogos</h2>
 
         <div class="container team-container">
 
