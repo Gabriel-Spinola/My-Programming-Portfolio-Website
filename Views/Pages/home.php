@@ -8,7 +8,9 @@ $userModel = new UserModel(new MySql);
 $controller = new HomeController();
 
 ?>
-
+https://thenounproject.com/icon/pixel-star-135344/
+https://thenounproject.com/icon/pixel-star-135350/
+https://thenounproject.com/icon/pixel-images-4603108/
 <main class="box">
     <?php
     $commentSection = function(string $id) use($controller)
