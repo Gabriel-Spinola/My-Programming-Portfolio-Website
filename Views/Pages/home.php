@@ -50,11 +50,13 @@ $controller = new HomeController();
 
                 <div class="col-md-12 text-center">
 
-                    <h2>&lt;Píngola&gt;</h2>
+                    <img src="<?php echo INCLUDE_PATH ?>Assets/Icon.png" alt="">
 
-                    <p>Company focused on digital marketing and web development</p>
+                    <h2>&lt;Gabriel-Spinola&gt;</h2>
 
-                    <a href="">Know More!</a>
+                    <p>Ola! Sou um Desenvolvedor de jogos e sistemas web e desktop</p>
+
+                    <a href="">Saiba Mais!</a>
 
                 </div><!--col-md-12--->
 
