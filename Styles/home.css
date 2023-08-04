@@ -121,7 +121,13 @@ section.differentials>h2 {
 }
 
 .differentials-container svg {
-    color: #26A599;
+    color: #9163ca;
+    
+}
+
+#abilities-title {
+    color: #FEFACC;
+    text-decoration: underline;
 }
 
 section.testimonial {
