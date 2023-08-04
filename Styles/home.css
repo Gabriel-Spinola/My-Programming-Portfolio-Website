@@ -1,21 +1,16 @@
 @font-face {
-    font-family: "FFFForwa";
-    src: url(../Assets/Fonts/FFFFORWA.TTF);
-}
-
-@font-face {
-    font-family: Joystix;
-    src: url(../Assets/Fonts/joystix\ monospace.otf);
+    font-family: slkscr;
+    src: url(../Assets/Fonts/Silkscreen/slkscr.ttf);
 }
 
 /**Style**/
 
 * {
-    font-family: "FFFForwa" !important;
+    font-family: "slkscr" !important;
 }
 
 * p {
-    font-family: FFFForwa !important;
+    font-family: slkscr !important;
 }
 
 .box {
@@ -33,7 +28,7 @@ section.banner {
     background-position: center;
 }
 
-section.banner>.container {
+section.banner > .container {
     position: relative;
     z-index: 2;
 }

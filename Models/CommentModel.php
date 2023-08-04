@@ -4,17 +4,18 @@
 
 namespace Models;
 
+use DbConnectionI;
 use PDOStatement;
 
 class CommentFields extends Fields {
     public const tableName = "tb_comments";
-
     public const ownerID = 'owner_id';
+    public const gameID = 'game_id';
     public const comment = 'comment';
 
     public static function getFields(): array {
         return [
-            self::ownerID, self::comment,
+            self::ownerID, self::gameID, self::comment,
         ];
     }
 }
@@ -22,10 +23,20 @@ class CommentFields extends Fields {
 class CommentModel extends Model {
     public function getData(): array { 
         $query = $this -> pdo -> connect() -> prepare(
-            "SELECT * FROM `" . UserFields::tableName . "` ORDER BY " . UserFields::ID . " DESC"
+            "SELECT * FROM `" . CommentFields::tableName . "` ORDER BY " . Fields::ID . " DESC"
         );
 
         $query -> execute();
+
+        return $query -> fetchAll();
+    }
+
+    public function getByGameID(string $gamedID): array {
+        $query = $this -> pdo -> connect() -> prepare(
+            "SELECT * FROM `" . CommentFields::tableName . "` WHERE " . CommentFields::gameID ."=? "
+        );
+
+        $query -> execute([$gamedID]);
 
         return $query -> fetchAll();
     }
@@ -57,9 +68,9 @@ class CommentModel extends Model {
 
     public function insertData(array $data): bool { 
         $query = $this -> pdo -> connect() -> prepare(
-            "INSERT INTO `" . UserFields::tableName . "`
-             VALUES (null, ?, ?)"
-        ); 
+            "INSERT INTO `" . CommentFields::tableName . "`
+             VALUES (null, ?, ?, ?)"
+        );
         
         return $query -> execute($data);
     }
@@ -69,6 +80,7 @@ class CommentModel extends Model {
             "UPDATE `" . UserFields::tableName . "`
              SET `" .
              CommentFields::ownerID . "`=?, `" .
+             CommentFields::gameID . "`=?, `" .
              CommentFields::comment . "`=?, `
              WHERE `" . UserFields::ID . "` = ?"
         ); 

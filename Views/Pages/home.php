@@ -1,11 +1,44 @@
 <?php
 
+use Controllers\HomeController;
+use Models\CommentFields;
 use Models\UserModel;
 
 $userModel = new UserModel(new MySql);
+$controller = new HomeController();
+
 ?>
 
 <main class="box">
+    <?php
+    $commentSection = function(string $id) use($controller)
+    {
+    ?>
+        <?php foreach ($controller->displayComments($id) as $key => $row) : ?>
+
+            <div class="container w-100">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis"></strong>
+                        <h3 class="mb-0">Username</h3>
+
+                        <hr>
+
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+
+                        <p class="mb-auto"><?php print $row[CommentFields::comment] ?></p>
+
+                        <div class="row">
+                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
+                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <?php endforeach ?>
+    <?php
+    } ?>
 
     <section class="banner">
 
@@ -144,67 +177,214 @@ $userModel = new UserModel(new MySql);
 
         <div class="container team-container">
 
+            <?php
+            if (isset($_POST['submit-comment-game1'])) {
+                $controller->handleCommentSubmission('1');
+            }
+
+            if (isset($_POST['submit-comment-game2'])) {
+                $controller->handleCommentSubmission('2');
+            }
+
+            if (isset($_POST['submit-comment-game3'])) {
+                $controller->handleCommentSubmission('3');
+            }
+
+            if (isset($_POST['submit-comment-game4'])) {
+                $controller->handleCommentSubmission('4');
+            }
+            ?>
+
+
             <div class="row">
 
-                <?php foreach ($userModel->getData() as $key => $row) : ?>
+                <div class="col-md-6">
 
-                    <?php 
-                        if (isset($_POST['submit-comment'])) {
-                            
-                        }    
-                    ?>
+                    <div class="team-single">
 
-                    <div class="col-md-6">
+                        <div class="row">
 
-                        <div class="team-single">
+                            <div class="col-md-3">
 
-                            <div class="row">
+                                <div class="user-picture">
 
-                                <div class="col-md-3">
-
-                                    <div class="user-picture">
-
-                                        <div class="user-picture-child">
-                                            <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
-                                        </div>
-
+                                    <div class="user-picture-child">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
                                     </div>
 
-                                </div><!--col-md-3-->
+                                </div>
 
-                                <div class="col-md-9 col-md-offset-1">
+                            </div><!--col-md-3-->
 
-                                    <h3>Hell End</h3>
+                            <div class="col-md-9 col-md-offset-1">
 
-                                    <p>(PT-BR)
+                                <h3>Hell End</h3>
 
-                                        Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
-                                        <br><br>
-                                        Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos</p>
+                                <p>(PT-BR)
 
-                                </div><!--col-md-9-->
+                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                    <br><br>
+                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                </p>
 
-                            </div><!--row-->
+                            </div><!--col-md-9-->
 
-                            <form method="post">
-                                <input
-                                    type="hidden"
-                                    name="owner-name" 
-                                    value="<?php print $_SESSION['username'] ?? '' ?>"
-                                >
+                        </div><!--row-->
 
-                                <textarea name="comment" id="comment">
+                        <form method="post">
+                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
 
-                                </textarea>
+                            <textarea name="comment" id="comment"></textarea>
 
-                                <input type="submit" name="submit-comment" id="submit-comment" value="Enviar Comentário">
-                            </form>
+                            <input type="submit" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentário">
+                        </form>
 
-                        </div><!--team-single-->
+                        <?php $commentSection('1') ?>
 
-                    </div><!--col-md-6-->
+                    </div><!--team-single-->
 
-                <?php endforeach ?>
+                </div><!--col-md-6-->
+
+                <div class="col-md-6">
+
+                    <div class="team-single">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                <div class="user-picture">
+
+                                    <div class="user-picture-child">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                    </div>
+
+                                </div>
+
+                            </div><!--col-md-3-->
+
+                            <div class="col-md-9 col-md-offset-1">
+
+                                <h3>Hell End</h3>
+
+                                <p>(PT-BR)
+
+                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                    <br><br>
+                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                </p>
+
+                            </div><!--col-md-9-->
+
+                        </div><!--row-->
+
+                        <form method="post">
+                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                            <textarea name="comment" id="comment"></textarea>
+
+                            <input type="submit" name="submit-comment-game2" id="submit-comment-game2" value="Enviar Comentário">
+                        </form>
+
+                        <?php $commentSection('2') ?>
+
+                    </div><!--team-single-->
+
+                </div><!--col-md-6-->
+
+                <div class="col-md-6 mt-4">
+
+                    <div class="team-single">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                <div class="user-picture">
+
+                                    <div class="user-picture-child">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                    </div>
+
+                                </div>
+
+                            </div><!--col-md-3-->
+
+                            <div class="col-md-9 col-md-offset-1">
+
+                                <h3>Hell End</h3>
+
+                                <p>(PT-BR)
+
+                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                    <br><br>
+                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                </p>
+
+                            </div><!--col-md-9-->
+
+                        </div><!--row-->
+
+                        <form method="post">
+                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                            <textarea name="comment" id="comment"></textarea>
+
+                            <input type="submit" name="submit-comment-game3" id="submit-comment-game3" value="Enviar Comentário">
+                        </form>
+
+                        <?php $commentSection('3') ?>
+
+                    </div><!--team-single-->
+
+                </div><!--col-md-6-->
+
+                <div class="col-md-6 mt-4">
+
+                    <div class="team-single">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                <div class="user-picture">
+
+                                    <div class="user-picture-child">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                    </div>
+
+                                </div>
+
+                            </div><!--col-md-3-->
+
+                            <div class="col-md-9 col-md-offset-1">
+
+                                <h3>Hell End</h3>
+
+                                <p>(PT-BR)
+
+                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                    <br><br>
+                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                </p>
+
+                            </div><!--col-md-9-->
+
+                        </div><!--row-->
+
+                        <form method="post">
+                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                            <textarea name="comment" id="comment"></textarea>
+
+                            <input type="submit" name="submit-comment-game4" id="submit-comment-game4" value="Enviar Comentário">
+                        </form>
+
+                        <?php $commentSection('4') ?>
+
+                    </div><!--team-single-->
+
+                </div><!--col-md-6-->
 
             </div><!--row-->
 
