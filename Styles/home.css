@@ -9,6 +9,14 @@
     color: #ff77a8;
 }
 
+.hell-end-bg {
+    background-color: #dd3270;
+    color: #FEFACC;
+    border: none;
+    font-weight: 800;
+    font-size: 16px;
+}
+
 .re-bot {
     color: #EA752B;
 }
@@ -30,6 +38,23 @@
     top: 30px;
     background-color: #0A0D14;
     color: #fffcdf;
+}
+
+#go-down {
+    transform: translateY(18%);
+}
+
+#go-up {
+    margin: auto;
+}
+
+#send-name {
+    background-color: #30B33A;
+    color: #FEFACC;
+}
+
+#send-name-border {
+    border: 2px solid #30B33A !important;
 }
 
 section.banner {
@@ -111,7 +136,7 @@ section.differentials p {
     font-size: 18px;
 }
 
-section.differentials>h2 {
+section.differentials > h2 {
     color: #4b4b4b;
     text-decoration: underline;
 }
@@ -132,6 +157,7 @@ section.differentials>h2 {
 
 section.testimonial {
     padding: 20px 0;
+    background-color: #060214;
 }
 
 section.testimonial h2 {
@@ -140,7 +166,7 @@ section.testimonial h2 {
 }
 
 section.testimonial blockquote {
-    color: #4b4b4b;
+    color: #6A87A1;
     font-size: 20px;
 }
 
@@ -151,6 +177,11 @@ section.team h2 {
     background: #EA752B;
     color: white;
     text-decoration: underline;
+}
+
+#comment {
+    background-color: transparent;
+    color: #FEFACC;
 }
 
 .link-warning {
@@ -186,9 +217,21 @@ section.team h2 {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #ccc;
+    background: transparent;
     border-radius: 50%;
     /* circle */
+}
+
+#hell-end-picture {
+    border-radius: 0% !important;
+}
+
+#hell-end-picture img {
+    border-radius: 0% !important;
+}
+
+.user-picture-child img {
+    border-radius: 50%;
 }
 
 section.contract-plans {

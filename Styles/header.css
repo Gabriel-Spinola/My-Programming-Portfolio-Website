@@ -2,6 +2,10 @@
     margin-bottom: 0;
 }
 
+.nav-item {
+    font-size: 18px;
+}
+
 nav .active a {
     color: #69e1e6 !important;
 }

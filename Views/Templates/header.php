@@ -45,19 +45,18 @@
                         <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>contact" tabindex="-1">contact</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="https://www.linkedin.com/in/gabriel-spinola-b64b5b273/">Linkedin</a> </li>
 
-                    </ul><!--navbar-nav--->
-
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
-                        <?php if ($_SESSION[Position::class] == Position::Admin->value) : ?>
-                            <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>adm" tabindex="-1"> Admin Panel </a> </li>
-                        <?php endif ?>
 
                         <?php if (AuthController::isLogged()) : ?>
                             <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>signin?logout" tabindex="-1">Logout</a></li>
                         <?php else : ?>
                             <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>signin" tabindex="-1">Login</a></li>
                         <?php endif ?>
-                    </ul>
+
+                        <?php if ($_SESSION[Position::class] == Position::Admin->value) : ?>
+                            <li class="nav-item"> <a class="nav-link " href="<?php echo INCLUDE_PATH ?>adm" tabindex="-1">Admin Panel</a></li>
+                        <?php endif ?>
+                        
+                    </ul><!--navbar-nav--->
 
                 </div><!--collapse navbar-collapser--->
 

@@ -75,10 +75,11 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                 <div class="col-md-6">
 
-                    <h2>
+                    <h2 id="go-down">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                        </svg> Join our list
+                        </svg>
+                        Join our list
                     </h2>
 
                 </div>
@@ -87,7 +88,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                     <form method="post">
 
-                        <input type="text" name="name"><input type="submit" name="action" value="Enviar">
+                        <input type="text" name="name" id="send-name-border"><input type="submit" name="action" value="Enviar" id="send-name">
 
                     </form>
 
@@ -133,16 +134,18 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                 </div><!--col-md-4-->
 
-                <div class="text-center">
+                <div class="text-center mt-5">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tree-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0z" />
-                        <path d="M7 13.5h2V16H7v-2.5z" />
-                    </svg>
+                    <div class="m-auto w-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tree-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0z" />
+                            <path d="M7 13.5h2V16H7v-2.5z" />
+                        </svg>
 
-                    <h2>Dart/Flutter</h2>
+                        <h2>Dart/Flutter</h2>
 
-                    <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui.</p>
+                        <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui.</p>
+                    </div>
 
                 </div><!--col-md-4-->
 
@@ -160,7 +163,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                 <div class="col-md-12">
 
-                    <h2>Minhas Aplicacoes </h2>
+                    <h2>Minhas Aplicacoes</h2>
 
                     <blockquote>
 
@@ -211,7 +214,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                             <div class="col-md-3">
 
-                                <div class="user-picture">
+                                <div class="user-picture" id="hell-end-picture">
 
                                     <div class="user-picture-child">
                                         <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
@@ -240,15 +243,23 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                         </div><!--row-->
 
-                        <form method="post">
-                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+                        <hr>
 
-                            <textarea name="comment" id="comment"></textarea>
+                        <div class="comment-box">
 
-                            <input type="submit" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentário">
-                        </form>
+                            <h6>Comentarios</h6>
 
-                        <?php $commentSection('1') ?>
+                            <form method="post">
+                                <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                                <textarea name="comment" id="comment" class="form-control" placeholder="Escreva seu comentario..."></textarea>
+
+                                <input type="submit" class="form-control mt-2 hell-end-bg" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentario">
+                            </form>
+
+                            <?php $commentSection('1') ?>
+
+                        </div>
 
                     </div><!--team-single-->
 
