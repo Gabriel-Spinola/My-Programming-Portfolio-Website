@@ -40,6 +40,20 @@
     color: #fffcdf;
 }
 
+.app-links {
+    text-decoration: none;
+    color: white;
+}
+
+.apps-list {
+    list-style: none;
+}
+
+.app-links:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 #go-down {
     transform: translateY(18%);
 }
@@ -237,13 +251,13 @@ section.team h2 {
 section.contract-plans {
     padding: 30px 0;
     margin: 10px 0;
-    color: #4b4b44;
+    color: whitesmoke;
 }
 
 section.contract-plans h2 {
     margin-bottom: 20px;
     margin-top: 0;
-    color: #4b4b4b;
+    color: whitesmoke;
     font-size: 30px;
 }
 
@@ -283,6 +297,11 @@ section.contract-plans table {
 }
 
 @media screen and (max-width: 500px) {
+    main.box {
+        width: 100%;
+        position: relative;
+    }
+
     section.main-register input[ type=submit] {
         margin-top: 8px;
         width: 200px;
@@ -291,6 +310,10 @@ section.contract-plans table {
 
     .main-banner h2 {
         font-size: 40px;
-        color: #26A599;
+    }
+
+    #space-left::before {
+        content: '\a\a';
+        white-space: pre;
     }
 }

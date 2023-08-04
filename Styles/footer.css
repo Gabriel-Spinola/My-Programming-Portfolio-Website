@@ -1,7 +1,8 @@
 footer {
-    background: #ccc;
-    margin-top: 40px;
+    background: #4b4b4b;
+    margin-top: 20px;
     padding: 10px 0;
+    color: white;
 }
 
 footer p {

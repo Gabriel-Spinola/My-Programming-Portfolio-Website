@@ -8,9 +8,9 @@ $userModel = new UserModel(new MySql);
 $controller = new HomeController();
 
 ?>
-https://thenounproject.com/icon/pixel-star-135344/
+<!-- https://thenounproject.com/icon/pixel-star-135344/
 https://thenounproject.com/icon/pixel-star-135350/
-https://thenounproject.com/icon/pixel-images-4603108/
+https://thenounproject.com/icon/pixel-images-4603108/ -->
 <main class="box">
     <?php
     $commentSection = function (string $id) use ($controller) {
@@ -120,8 +120,6 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                 </div><!--col-md-4-->
 
-
-
                 <div class="col-md-6">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
@@ -165,11 +163,25 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                     <h2>Minhas Aplicacoes</h2>
 
-                    <blockquote>
+                    <ul class="apps-list">
+                        <h4 style="color: #30B33A;">Sistemas Web</h4>
+                        <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Github-Clone">Clone do Github</a></li>
+                        <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Github-Clone/tree/master/Patelandia">Sistema Web Pastelandia</a></li>
+                        <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Support-System">Sistema de Suporte (Rest API)</a></li>
+                        <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Website-PHP">Site empresarial com dashboard</a></li>
+                    </ul>
+                    
+                    <ul class="mt-5 apps-list">
+                        <h4 style="color: #30B33A;">Sistemas Desktop/Mobile</h4>
+                        <li><a class="app-links" href="https://github.com/Gabriel-Spinola/MentalHealthApp">Aplicativo Saúde Mental (Mobile)</a></li>
+                        <li><a href="https://github.com/Gabriel-Spinola/Flutter-CRM/" class="app-links">CRM em Flutter (Desktop)</a></li>
+                    </ul>
+
+                    <!-- <blockquote>
 
                         <p>"Phasellus et vehicula velit. Suspendisse ut faucibus lectus. Curabitur fermentum lacus odio, eget egestas turpis finibus in. Aliquam eget urna condimentum, lobortis nisl quis, congue libero. Maecenas non velit consectetur, ultrices justo sed, gravida purus. Phasellus efficitur tempus dolor, sit amet vehicula ligula condimentum quis. Ut euismod, urna ac ultricies lacinia, lectus justo vulputate sem, vitae faucibus eros mi quis nisl"</p> #1
 
-                    </blockquote>
+                    </blockquote> -->
 
                 </div><!--col-md-12-->
 
@@ -257,7 +269,26 @@ https://thenounproject.com/icon/pixel-images-4603108/
                                 <input type="submit" class="form-control mt-2 hell-end-bg" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentario">
                             </form>
 
-                            <?php $commentSection('1') ?>
+                            <div class="container w-100">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                    <div class="col p-4 d-flex flex-column position-static">
+                                        <div>
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
+                                            <h3 class="mb-0">didigameboy</h3>
+                                            <small class="mb-1 text-body-secondary">date</small>
+                                        </div>
+
+                                        <hr>
+
+                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
+
+                                        <div class="row">
+                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
+                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -309,8 +340,6 @@ https://thenounproject.com/icon/pixel-images-4603108/
                             <input type="submit" name="submit-comment-game2" id="submit-comment-game2" value="Enviar Comentário">
                         </form>
 
-                        <?php $commentSection('2') ?>
-
                     </div><!--team-single-->
 
                 </div><!--col-md-6-->
@@ -360,8 +389,6 @@ https://thenounproject.com/icon/pixel-images-4603108/
                             <input type="submit" name="submit-comment-game3" id="submit-comment-game3" value="Enviar Comentário">
                         </form>
 
-                        <?php $commentSection('3') ?>
-
                     </div><!--team-single-->
 
                 </div><!--col-md-6-->
@@ -389,7 +416,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
                                 <h3 class="rainbow-seven">Prototipo de Jogo 3D Multiplayer</h3>
 
                                 <p>(PT-BR)
-                               
+
                                     Um jogo multijogador inspirado no triple A Rainbow six e a franquia Counter Strike.</strong>
                                     <br><br>
                                     <em>Ver Jogo:</em> <a href="https://gabriel-spinola.itch.io/jumbbubble" class="rainbow-seven">Gabriel-Spinola Itch.io</a>
@@ -408,8 +435,6 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                             <input type="submit" name="submit-comment-game4" id="submit-comment-game4" value="Enviar Comentário">
                         </form>
-
-                        <?php $commentSection('4') ?>
 
                     </div><!--team-single-->
 
