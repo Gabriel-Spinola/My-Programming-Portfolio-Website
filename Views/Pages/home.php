@@ -11,6 +11,13 @@ $controller = new HomeController();
 <!-- https://thenounproject.com/icon/pixel-star-135344/
 https://thenounproject.com/icon/pixel-star-135350/
 https://thenounproject.com/icon/pixel-images-4603108/ -->
+<script src="<?php echo INCLUDE_PATH ?>Scripts/scroll.js"></script>
+<script src="<?php echo INCLUDE_PATH ?>Scripts/home.js"></script>
+
+<script>
+    ScrollToItem('a#contact', '.contract-plans')
+</script>
+
 <main class="box">
     <?php
     $commentSection = function (string $id) use ($controller) {
@@ -79,7 +86,7 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                         </svg>
-                        Join our list
+                        Entre na Lista
                     </h2>
 
                 </div>
@@ -110,39 +117,39 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 <div class="col-md-6">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-joystick mb-2" viewBox="0 0 16 16">
+  <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+  <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+</svg>
 
                     <h2>C#/Unity/Monogame</h2>
 
-                    <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est.</p>
+                    <p>Combinando meu domínio em C# com minha experiência em Unity e MonoGame, busco transformar ideias criativas em jogos interativos e envolventes, entregando experiências únicas e memoráveis para os jogadores.</p>
 
                 </div><!--col-md-4-->
 
                 <div class="col-md-6">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z" />
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-browser-chrome mb-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+</svg>
 
                     <h2>PHP/JavaScript</h2>
 
-                    <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui, aliquet vitae auctor vel</p>
+                    <p>Ao combinar PHP e JavaScript, tenho a capacidade de criar aplicações web completas, desde a interação do usuário com a interface até a manipulação dos dados nos bastidores. Oferecendo a melhor experiência possível.</p>
 
                 </div><!--col-md-4-->
 
                 <div class="text-center mt-5">
 
                     <div class="m-auto w-50">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tree-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0z" />
-                            <path d="M7 13.5h2V16H7v-2.5z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-pc-display-horizontal mb-2" viewBox="0 0 16 16">
+                            <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z" />
                         </svg>
 
                         <h2>Dart/Flutter</h2>
 
-                        <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui.</p>
+                        <p>Dart e Flutter me permite desenvolver aplicativos móveis de alta qualidade, com desempenho excepcional e interface intuitiva. Dart e Flutter também oferece uma solução poderosa e versátil para a criação de aplicativos desktop.</p>
                     </div>
 
                 </div><!--col-md-4-->
@@ -161,27 +168,21 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 <div class="col-md-12">
 
-                    <h2>Minhas Aplicacoes</h2>
+                    <h1>Minhas Aplicacoes</h1>
 
                     <ul class="apps-list">
-                        <h4 style="color: #30B33A;">Sistemas Web</h4>
+                        <h3 style="color: #30B33A;">Sistemas Web</h3>
                         <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Github-Clone">Clone do Github</a></li>
                         <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Github-Clone/tree/master/Patelandia">Sistema Web Pastelandia</a></li>
                         <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Support-System">Sistema de Suporte (Rest API)</a></li>
                         <li><a class="app-links" href="https://github.com/Gabriel-Spinola/Website-PHP">Site empresarial com dashboard</a></li>
                     </ul>
-                    
+
                     <ul class="mt-5 apps-list">
-                        <h4 style="color: #30B33A;">Sistemas Desktop/Mobile</h4>
+                        <h3 style="color: #30B33A;">Sistemas Desktop/Mobile</h3>
                         <li><a class="app-links" href="https://github.com/Gabriel-Spinola/MentalHealthApp">Aplicativo Saúde Mental (Mobile)</a></li>
                         <li><a href="https://github.com/Gabriel-Spinola/Flutter-CRM/" class="app-links">CRM em Flutter (Desktop)</a></li>
                     </ul>
-
-                    <!-- <blockquote>
-
-                        <p>"Phasellus et vehicula velit. Suspendisse ut faucibus lectus. Curabitur fermentum lacus odio, eget egestas turpis finibus in. Aliquam eget urna condimentum, lobortis nisl quis, congue libero. Maecenas non velit consectetur, ultrices justo sed, gravida purus. Phasellus efficitur tempus dolor, sit amet vehicula ligula condimentum quis. Ut euismod, urna ac ultricies lacinia, lectus justo vulputate sem, vitae faucibus eros mi quis nisl"</p> #1
-
-                    </blockquote> -->
 
                 </div><!--col-md-12-->
 
@@ -218,9 +219,9 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
             <div class="row">
 
-                <div class="col-md-6">
+                <div class="col-md-auto w-100">
 
-                    <div class="team-single">
+                    <div class="team-single" id="game1">
 
                         <div class="row">
 
@@ -269,7 +270,11 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
                                 <input type="submit" class="form-control mt-2 hell-end-bg" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentario">
                             </form>
 
-                            <div class="container w-100">
+                            <div class="text-center">
+                                <button id="show1" class="btn btn-warning float-right m-2 w-50 text-right" onclick="showComment('display-comments1', 'show1')">Mostrar Comentarios</button>
+                            </div>
+
+                            <div class="container w-100 comments-sec" id="display-comments1" style="display: none">
                                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                                     <div class="col p-4 d-flex flex-column position-static">
                                         <div>
@@ -296,7 +301,7 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 </div><!--col-md-6-->
 
-                <div class="col-md-6">
+                <div class="col-md-auto w-100 mt-5">
 
                     <div class="team-single">
 
@@ -332,19 +337,51 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                         </div><!--row-->
 
-                        <form method="post">
-                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+                        <hr>
 
-                            <textarea name="comment" id="comment"></textarea>
+                        <div class="comment-box">
 
-                            <input type="submit" name="submit-comment-game2" id="submit-comment-game2" value="Enviar Comentário">
-                        </form>
+                            <h6>Comentarios</h6>
 
+                            <form method="post">
+                                <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                                <textarea name="comment" id="comment" class="form-control" placeholder="Escreva seu comentario..."></textarea>
+
+                                <input type="submit" class="form-control mt-2 hell-end-bg" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentario">
+                            </form>
+
+                            <div class="text-center">
+                                <button id="show2" class="btn btn-warning float-right m-2 w-50 text-right" onclick="showComment('display-comments2', 'show2')">Mostrar Comentarios</button>
+                            </div>
+
+                            <div class="container w-100 comments-sec" id="display-comments2" style="display: none">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                    <div class="col p-4 d-flex flex-column position-static">
+                                        <div>
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
+                                            <h3 class="mb-0">didigameboy</h3>
+                                            <small class="mb-1 text-body-secondary">date</small>
+                                        </div>
+
+                                        <hr>
+
+                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
+
+                                        <div class="row">
+                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
+                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div><!--team-single-->
 
                 </div><!--col-md-6-->
 
-                <div class="col-md-6 mt-4">
+                <div class="col-md-auto w-100 mt-5">
 
                     <div class="team-single">
 
@@ -381,19 +418,51 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                         </div><!--row-->
 
-                        <form method="post">
-                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+                        <hr>
 
-                            <textarea name="comment" id="comment"></textarea>
+                        <div class="comment-box">
 
-                            <input type="submit" name="submit-comment-game3" id="submit-comment-game3" value="Enviar Comentário">
-                        </form>
+                            <h6>Comentarios</h6>
 
+                            <form method="post">
+                                <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                                <textarea name="comment" id="comment" class="form-control" placeholder="Escreva seu comentario..."></textarea>
+
+                                <input type="submit" class="form-control mt-2 hell-end-bg" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentario">
+                            </form>
+
+                            <div class="text-center">
+                                <button id="show3" class="btn btn-warning float-right m-2 w-50 text-right" onclick="showComment('display-comments3', 'show3')">Mostrar Comentarios</button>
+                            </div>
+
+                            <div class="container w-100 comments-sec" id="display-comments3" style="display: none">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                    <div class="col p-4 d-flex flex-column position-static">
+                                        <div>
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
+                                            <h3 class="mb-0">didigameboy</h3>
+                                            <small class="mb-1 text-body-secondary">date</small>
+                                        </div>
+
+                                        <hr>
+
+                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
+
+                                        <div class="row">
+                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
+                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div><!--team-single-->
 
                 </div><!--col-md-6-->
 
-                <div class="col-md-6 mt-4">
+                <div class="col-md-auto w-100 mt-5">
 
                     <div class="team-single">
 
@@ -428,13 +497,46 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                         </div><!--row-->
 
-                        <form method="post">
-                            <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+                        <hr>
 
-                            <textarea name="comment" id="comment"></textarea>
+                        <div class="comment-box">
 
-                            <input type="submit" name="submit-comment-game4" id="submit-comment-game4" value="Enviar Comentário">
-                        </form>
+                            <h6>Comentarios</h6>
+
+                            <form method="post">
+                                <input type="hidden" name="owner-name" value="<?php print $_SESSION['username'] ?? '' ?>">
+
+                                <textarea name="comment" id="comment" class="form-control" placeholder="Escreva seu comentario..."></textarea>
+
+                                <input type="submit" class="form-control mt-2 hell-end-bg" name="submit-comment-game1" id="submit-comment-game1" value="Enviar Comentario">
+                            </form>
+
+                            <div class="text-center">
+                                <button id="show4" class="btn btn-warning float-right m-2 w-50 text-right" onclick="showComment('display-comments4', 'show4')">Mostrar Comentarios</button>
+                            </div>
+
+                            <div class="container w-100 comments-sec" id="display-comments4" style="display: none">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                    <div class="col p-4 d-flex flex-column position-static">
+                                        <div>
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
+                                            <h3 class="mb-0">didigameboy</h3>
+                                            <small class="mb-1 text-body-secondary">date</small>
+                                        </div>
+
+                                        <hr>
+
+                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
+
+                                        <div class="row">
+                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
+                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div><!--team-single-->
 
@@ -456,7 +558,7 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 <div class="col-md-6">
 
-                    <h2>Contact Us</h2>
+                    <h2>Me Contate</h2>
 
                     <form method="post">
 
@@ -487,7 +589,7 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                 </div><!--col-md-6-->
 
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
 
                     <h2>Our Plans</h2>
 
@@ -543,9 +645,9 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                     </table><!--table-bordered-->
 
-                </div><!--col-md-6-->
+            <!-- </div>col-md-6 -->
 
-            </div><!--row-->
+        </div><!--row-->
 
         </div><!--container-->
 

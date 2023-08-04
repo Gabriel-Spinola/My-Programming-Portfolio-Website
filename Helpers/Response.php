@@ -24,9 +24,9 @@ class Response
 
         <?php if ($response == 'success') : ?>
 
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success m-2" role="alert">
 
-                <h4 class="alert-heading">Well done!</h4>
+                <h4 class="alert-heading">BOA!</h4>
 
                 <p><?php print $message ?></p>
 

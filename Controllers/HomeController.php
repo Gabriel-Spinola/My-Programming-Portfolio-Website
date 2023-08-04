@@ -40,7 +40,7 @@ class HomeController extends PageController {
                 
 
                 if ($this -> commentModel -> insertData([$info[Fields::ID], $id, $comment])) {
-                    Response::simpleResponse('success', 'Eba');
+                    Response::simpleResponse('success', 'Seu comentario foi enviado para o banco de dados');
                 }
                 else {
                     Response::simpleResponse('error', 'Erro');

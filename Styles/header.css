@@ -35,3 +35,7 @@ header p {
     margin-top: 15px;
     position: relative;
 }
+
+a#contact {
+    cursor: pointer !important;
+}
