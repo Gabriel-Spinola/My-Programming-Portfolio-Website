@@ -5,12 +5,24 @@
 
 /**Style**/
 
-* {
-    font-family: "slkscr" !important;
+.hell-end {
+    color: #ff77a8;
 }
 
-* p {
-    font-family: slkscr !important;
+.re-bot {
+    color: #EA752B;
+}
+
+.jumbbubble {
+    color: #98E3E8;
+}
+
+.rainbow-seven {
+    color: #ad84df;
+}
+
+* {
+    font-family: "slkscr" !important;
 }
 
 .box {
@@ -130,9 +142,13 @@ section.team h2 {
     margin: 0;
     padding: 10px 2%;
     text-align: center;
-    background: #26A599;
+    background: #EA752B;
     color: white;
     text-decoration: underline;
+}
+
+.link-warning {
+    color: #EA752B !important;
 }
 
 .team-container {

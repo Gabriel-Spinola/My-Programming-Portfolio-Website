@@ -13,8 +13,7 @@ https://thenounproject.com/icon/pixel-star-135350/
 https://thenounproject.com/icon/pixel-images-4603108/
 <main class="box">
     <?php
-    $commentSection = function(string $id) use($controller)
-    {
+    $commentSection = function (string $id) use ($controller) {
     ?>
         <?php foreach ($controller->displayComments($id) as $key => $row) : ?>
 
@@ -102,44 +101,44 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
     <section class="differentials text-center">
 
-        <h2>Meet Our Company</h2>
+        <h2>Habilidades</h2>
 
         <div class="container differentials-container">
 
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-md-5">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                     </svg>
 
-                    <h2>1st Differential:</h2>
+                    <h2>C#/Unity/Monogame</h2>
 
                     <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui, aliquet vitae auctor vel, sodales non felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam erat volutpat. Vivamus mauris orci, sollicitudin et ex nec, pharetra pretium massa.</p>
 
                 </div><!--col-md-4-->
 
-                <div class="col-md-4">
+                <div class="col-md-5">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z" />
                     </svg>
 
-                    <h2>2nd Differential:</h2>
+                    <h2>PHP/JavaScript</h2>
 
                     <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui, aliquet vitae auctor vel, sodales non felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam erat volutpat. Vivamus mauris orci, sollicitudin et ex nec, pharetra pretium massa.</p>
 
                 </div><!--col-md-4-->
 
-                <div class="col-md-4">
+                <div class="col-md-5">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tree-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0z" />
                         <path d="M7 13.5h2V16H7v-2.5z" />
                     </svg>
 
-                    <h2>3rd Differential:</h2>
+                    <h2>Dart/Flutter</h2>
 
                     <p>Proin sed nibh enim. In quis magna sed enim placerat dictum. Fusce hendrerit fermentum velit. Vestibulum imperdiet metus et eleifend tincidunt. Etiam nisi lacus, laoreet a lacus sed, lobortis blandit est. Nunc purus dui, aliquet vitae auctor vel, sodales non felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam erat volutpat. Vivamus mauris orci, sollicitudin et ex nec, pharetra pretium massa.</p>
 
@@ -159,7 +158,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                 <div class="col-md-12">
 
-                    <h2>testimonial</h2>
+                    <h2>Minhas Aplicacoes </h2>
 
                     <blockquote>
 
@@ -222,13 +221,17 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                             <div class="col-md-9 col-md-offset-1">
 
-                                <h3>Hell End</h3>
+                                <h3 class="hell-end">Hell End</h3>
 
                                 <p>(PT-BR)
 
                                     Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
                                     <br><br>
                                     Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                    <br><br>
+                                    <em>Ver Jogo:</em> <a href="https://gabriel-spinola.itch.io/vacajam" class="hell-end">Gabriel-Spinola Itch.io</a>
+                                    <br>
+                                    <em>Codigo do jogo:</em> <a href="https://github.com/Gabriel-Spinola/Vaca-Jam" class="hell-end">Codigo Fonte</a>
                                 </p>
 
                             </div><!--col-md-9-->
@@ -260,7 +263,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
                                 <div class="user-picture">
 
                                     <div class="user-picture-child">
-                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/Re-Bot!.png" alt="Game Icon" width="100%" height="100%">
                                     </div>
 
                                 </div>
@@ -269,13 +272,16 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                             <div class="col-md-9 col-md-offset-1">
 
-                                <h3>Hell End</h3>
+                                <h3 class="re-bot">Re-bot</h3>
 
                                 <p>(PT-BR)
-
-                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                    Esse jogo foi desenvolvido para a <strong>Game Jaaj 6</strong> que tinha o tema Ciclos.
                                     <br><br>
-                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                    Re-Bot é um jogo de plataforma 2D, com jogabilidade simples e intuitiva, ele vem com uma história enigmática e personagens muito fofos... Ou talvez nem tanto...
+                                    <br><br>
+                                    <em>Ver Jogo:</em> <a href="https://gabriel-spinola.itch.io/re-bot" class="re-bot">Gabriel-Spinola Itch.io</a>
+                                    <br>
+                                    <em>Codigo do jogo:</em> <a href="https://github.com/Gabriel-Spinola/Ciclos-GameJaaj6" class="re-bot">Codigo Fonte</a>
                                 </p>
 
                             </div><!--col-md-9-->
@@ -307,7 +313,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
                                 <div class="user-picture">
 
                                     <div class="user-picture-child">
-                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/Jumbbubble.png" alt="Game Icon" width="100%" height="100%">
                                     </div>
 
                                 </div>
@@ -316,13 +322,17 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                             <div class="col-md-9 col-md-offset-1">
 
-                                <h3>Hell End</h3>
+                                <h3 class="jumbbubble">Jumbbubble</h3>
 
                                 <p>(PT-BR)
 
-                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                                    Jumbbubble is a 2D platformer game where you're a cool ninja, that can turn into a shuriken, to kill evil bubbles and avoid obstacles.
                                     <br><br>
-                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                    This game was made in 72 hours for Mini-Jam 84, the theme was "bubbles" and the limitation was "you are your own ammo."
+                                    <br><br>
+                                    <em>Ver Jogo:</em> <a href="https://gabriel-spinola.itch.io/jumbbubble" class="jumbbubble">Gabriel-Spinola Itch.io</a>
+                                    <br>
+                                    <em>Codigo do jogo:</em> <a href="https://github.com/Gabriel-Spinola/Bubbles-MiniJam" class="jumbbubble">Codigo Fonte</a>
                                 </p>
 
                             </div><!--col-md-9-->
@@ -354,7 +364,7 @@ https://thenounproject.com/icon/pixel-images-4603108/
                                 <div class="user-picture">
 
                                     <div class="user-picture-child">
-                                        <img src="<?php echo INCLUDE_PATH ?>Assets/HellEnd.png" alt="Game Icon" width="100%" height="100%">
+                                        <img src="<?php echo INCLUDE_PATH ?>Assets/SpacelHell.png" alt="Game Icon" width="100%" height="100%">
                                     </div>
 
                                 </div>
@@ -363,13 +373,15 @@ https://thenounproject.com/icon/pixel-images-4603108/
 
                             <div class="col-md-9 col-md-offset-1">
 
-                                <h3>Hell End</h3>
+                                <h3 class="rainbow-seven">Prototipo de Jogo 3D Multiplayer</h3>
 
                                 <p>(PT-BR)
-
-                                    Esse jogo foi desenvolvido para a <strong>Jam #1/2</strong> com tema <strong>"o jogo mais fácil do mundo"</strong>
+                               
+                                    Um jogo multijogador inspirado no triple A Rainbow six e a franquia Counter Strike.</strong>
                                     <br><br>
-                                    Hell end é um jogo de plataforma 2D shooter, com jogabilidade precisa e muito caos
+                                    <em>Ver Jogo:</em> <a href="https://gabriel-spinola.itch.io/jumbbubble" class="rainbow-seven">Gabriel-Spinola Itch.io</a>
+                                    <br>
+                                    <em>Codigo do jogo:</em> <a href=" https://github.com/Gabriel-Spinola/Rainbow-Seven" class="rainbow-seven">Codigo Fonte</a>
                                 </p>
 
                             </div><!--col-md-9-->
