@@ -17,7 +17,7 @@
     position: relative;
     top: 30px;
     background-color: #0A0D14;
-    color: #AFBFD2;
+    color: #fffcdf;
 }
 
 section.banner {
@@ -67,7 +67,7 @@ section.banner > .container {
 }
 
 section.main-register {
-    background: #EA752B;
+    background: #ff77a8;
     padding: 20px 0;
 }
 
@@ -92,7 +92,7 @@ section.main-register input[ type=submit] {
 
 section.differentials {
     padding: 30px 0;
-    background: #22252C;
+    background: #090225;
 }
 
 section.differentials p {
