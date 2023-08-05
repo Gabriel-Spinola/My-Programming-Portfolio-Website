@@ -30,31 +30,31 @@
             }
         ?>
 
-        <form action="" method="post" class="form-signin w-100 m-auto">
+        <form action="" method="post" class="form-signin w-50 m-auto">
             <img class="mb-4" src="#" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal">Faca Login!</h1>
 
             <div class="form-floating m-2">
                 <input type="text" class="form-control" id="username" placeholder="nome de usuário" name="username">
-                <label for="floatingInput">Nome de usario</label>
+                <label for="floatingInput">Nome de Usuario</label>
             </div>
             
             <div class="form-floating m-2">
                 <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-                <label for="floatingPassword">Password</label>
+                <label for="floatingPassword">Senha</label>
             </div>
             
             <div class="form-check text-start my-3">
                 <label class="form-check-label" for="flexCheckDefault">
-                    Remember me
+                    Lembre de mim
                 </label>
                 <input class="form-check-input" type="checkbox" value="remember" id="flexCheckDefault">
             </div>
             
-            <button class="btn btn-primary w-100 py-2" name="login" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+            <button class="btn btn-primary w-50 py-2 mb-4" name="login" type="submit">Entrar</button>
+            <br>
             
-            <a class="small" href="<?php echo INCLUDE_PATH ?>signin?register">Register</a>
+            <a class="link" href="<?php echo INCLUDE_PATH ?>signin?register"> cadastro</a>
         </form>
 
     <?php else: ?>
@@ -64,34 +64,32 @@
             }
         ?>
 
-        <form method="post" class="form-signin w-100 m-auto" enctype="multipart/form-data">
+        <form method="post" class="form-signin w-50 m-auto" enctype="multipart/form-data">
             <img class="mb-4" src="#" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Register</h1>
+            <h1 class="h3 mb-3 fw-normal">Cadastre-se</h1>
 
             <div class="form-group m-2">
-                <label for="username">Usuário</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Nome de usuário">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Nome de usuário...">
             </div>
             
             <div class="form-group m-2">
-                <label for="password">Senha</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
             </div>
 
-            <div class="form-group m-2">
-                <label for="exampleFormControlFile1">Foto de Perfil</label>
+            <div class="form-group m-2 text-start">
+                <label for="profile_pic">Foto de Perfil</label>
                 <input type="file" class="form-control-file" id="profile_pic" name="profile_pic">
             </div>
 
             <div class="form-group m-2">
-                <label for="description">Descrição</label>
-                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Descricao..."></textarea>
             </div>
 
-            <button class="btn btn-primary w-100 py-2" type="submit" name="register">Enviar</button>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+            <button class="btn btn-primary w-50 py-2 mb-4 mt-4" type="submit" name="register">Enviar</button>
 
-            <a class="small" href="<?php echo INCLUDE_PATH ?>signin">login</a>
+            <br>
+
+            <a class="link" href="<?php echo INCLUDE_PATH ?>signin">login</a>
         </form>
 
     <?php endif ?>

@@ -1,3 +1,34 @@
 * {
     font-family: "slkscr" !important;
+    
+}
+
+main {
+    background-color: #0A0D14;
+    height: 100%;
+    color: #fffcdf;
+}
+
+label {
+    color:#0A0D14;
+}
+
+label[for=flexCheckDefault],
+label[for=profile_pic] {
+    color:rgb(255, 255, 255) !important;
+}
+
+button {
+    background-color: #98E3E8 !important;
+    border-color: #98E3E8 !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+}
+
+a.link {
+    color :#98E3E8 !important;
+}
+
+footer {
+    margin: 0 !important;
 }

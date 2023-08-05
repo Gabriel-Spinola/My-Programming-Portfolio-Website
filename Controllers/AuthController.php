@@ -52,7 +52,7 @@ class AuthController {
         Response::simpleResponse('error', 'Nome de usuário ou senha incorretos');
     }
     
-    public function register(string $username, string $password, string $description): void {
+    public function register(string $username, string $password, string $description): bool {
         try {
             // $profilePic = ImageUploader::receiveUserImageFromPost('profile_pic');
         } catch (Exception $e) {
@@ -62,8 +62,8 @@ class AuthController {
             $profilePic = '';
         }
 
-        $this -> model -> insertData([
-            $username, $password, $description, Position::User->value, $profilePic
+        return $this -> model -> insertData([
+            $username, $password, $description, Position::User->value/*, $profilePic*/
         ]);
     }
 

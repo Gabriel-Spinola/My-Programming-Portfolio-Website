@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Helpers\Response;
 use Helpers\Router;
 use Models\UserFields;
 
@@ -37,7 +38,13 @@ class SignInController extends PageController {
         $password = $_POST['password'];
         $description = $_POST['description'];
 
-        $this -> authController -> register($username, $password, $description);
+        if ($this -> authController -> register($username, $password, $description)) {
+            header('Location:' . INCLUDE_PATH . 'signin');
+            die;
+        }
+        else {
+            Response::simpleResponse('error', 'falha a fazer registro');
+        }
     }
 
     public function rememberMe(): void {

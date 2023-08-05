@@ -20,9 +20,6 @@ if (!isset($_SESSION['isLogged'])) {
 }
 
 ?>
-<!-- https://thenounproject.com/icon/pixel-star-135344/
-https://thenounproject.com/icon/pixel-star-135350/
-https://thenounproject.com/icon/pixel-images-4603108/ -->
 <script src="<?php echo INCLUDE_PATH ?>Scripts/scroll.js"></script>
 <script src="<?php echo INCLUDE_PATH ?>Scripts/home.js"></script>
 
@@ -578,7 +575,7 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                         <div class="form-group">
 
-                            <label for="nome">name:</label>
+                            <label for="nome">Nome:</label>
                             <input type="text" name="name" class="form-control" id="nome">
 
                         </div><!--form-group-->
@@ -592,12 +589,12 @@ https://thenounproject.com/icon/pixel-images-4603108/ -->
 
                         <div class="form-group">
 
-                            <label for="message">Message:</label>
+                            <label for="message">Mensagem:</label>
                             <textarea class="form-control" id="message"></textarea>
 
                         </div><!--form-group-->
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
 
                     </form>
 
