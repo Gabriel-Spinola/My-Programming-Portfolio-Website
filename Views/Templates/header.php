@@ -32,7 +32,7 @@
 
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">Spinola</a>
+                <a class="navbar-brand" href="<?php echo INCLUDE_PATH ?>">Spinola</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 
