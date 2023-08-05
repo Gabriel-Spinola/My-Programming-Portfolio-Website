@@ -370,14 +370,33 @@ if (!isset($_SESSION['isLogged'])) {
                                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                                     <div class="col p-4 d-flex flex-column position-static">
                                         <div>
-                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
-                                            <h3 class="mb-0">didigameboy</h3>
-                                            <small class="mb-1 text-body-secondary">date</small>
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/ze.png" alt="user-pic" width="50" height="50">
+                                            <h3 class="mb-0">zéDasGotas</h3>
+                                            <small class="mb-1 text-body-secondary">1 anos atras</small>
                                         </div>
 
                                         <hr>
 
-                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
+                                        <p class="mb-auto">A</p>
+
+                                        <div class="row">
+                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
+                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                    <div class="col p-4 d-flex flex-column position-static">
+                                        <div>
+                                            <img src="<?php echo INCLUDE_PATH ?>Assets/rogue.png" alt="user-pic" width="50" height="50">
+                                            <h3 class="mb-0">roguetaver</h3>
+                                            <small class="mb-1 text-body-secondary">1 anos atras</small>
+                                        </div>
+
+                                        <hr>
+
+                                        <p class="mb-auto">Ótimo jogo, mandaram muito! A movimentação do personagem me lembra super meat boy,  além disso a arte do personagem principal e do robô estão muito fofinhas, a musica é agradável e os efeitos de glow ficaram muito bons também.  Se eu fosse sugerir alguma coisa seria deixar o movimento da camera mais suave talvez, mas o jogo tá incrível, tão de parabéns!</p>
 
                                         <div class="row">
                                             <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
@@ -447,26 +466,7 @@ if (!isset($_SESSION['isLogged'])) {
                                 <button id="show3" class="btn btn-warning float-right m-2 w-50 text-right" onclick="showComment('display-comments3', 'show3')">Mostrar Comentarios</button>
                             </div>
 
-                            <div class="container w-100 comments-sec" id="display-comments3" style="display: none">
-                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                                    <div class="col p-4 d-flex flex-column position-static">
-                                        <div>
-                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
-                                            <h3 class="mb-0">didigameboy</h3>
-                                            <small class="mb-1 text-body-secondary">date</small>
-                                        </div>
-
-                                        <hr>
-
-                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
-
-                                        <div class="row">
-                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
-                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
                         </div>
                     </div><!--team-single-->
@@ -524,27 +524,6 @@ if (!isset($_SESSION['isLogged'])) {
 
                             <div class="text-center">
                                 <button id="show4" class="btn btn-warning float-right m-2 w-50 text-right" onclick="showComment('display-comments4', 'show4')">Mostrar Comentarios</button>
-                            </div>
-
-                            <div class="container w-100 comments-sec" id="display-comments4" style="display: none">
-                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                                    <div class="col p-4 d-flex flex-column position-static">
-                                        <div>
-                                            <img src="<?php echo INCLUDE_PATH ?>Assets/didi.png" alt="user-pic" width="50" height="50">
-                                            <h3 class="mb-0">didigameboy</h3>
-                                            <small class="mb-1 text-body-secondary">date</small>
-                                        </div>
-
-                                        <hr>
-
-                                        <p class="mb-auto">Legal demais, com certeza muita coisa pra 3dias. A arte tá bem legal, gostei demais da paleta e da musica. Foge um pouco do tema, mas o importante é a diversão. Senti falta de alguma anim ou partículas qd os inimigos morrem/explodem, o screenshake está na medida, tbm senti falta de objetivos no level(quanto que temos q destruir para aparecer a saída?) E senti falta de algum portal ou algo que anuncie a aparição de um novo inimigo. Tbm faltou alguma coisa para mostrar/introduzir a nova arma cada level. Boa sacada a mecânica de recuo com o shotgun ;)</p>
-
-                                        <div class="row">
-                                            <a href="#" class="col-1 link-warning icon-link icon-link-hover stretched-link mt-2">edit</a>
-                                            <a href="#" class="col-4 link-danger icon-link icon-link-hover stretched-link mt-2 m-2" id="space-left">delete</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                         </div>
